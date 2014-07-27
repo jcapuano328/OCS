@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OCS Assistant</string>
+    <string name="titleScs">OCS</string>
+    <string name="titleAsst">Assistant</string>
+    <string name="reset">Reset</string>
+</resources>
