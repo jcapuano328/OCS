@@ -61,7 +61,6 @@ public class MainActivity extends Activity {
     }
     
     private void showGame(Game game) {
-        /*
         // display the game view
         if (game != null) {
             Intent gameDetail = new Intent (me, GameActivity.class);
@@ -69,6 +68,5 @@ public class MainActivity extends Activity {
 
             startActivity (gameDetail);
         }
-        */
     }
 }

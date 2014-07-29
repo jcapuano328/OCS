@@ -12,9 +12,40 @@ public class Game {
     private String image;
     private Calendar startDate;
     private int turns;
-    private int dateIncr1;
-    private int dateIncr2;
+    private ArrayList<Integer> turnTable;
     private ArrayList<Player> players;
+    private static final String[] phases = {
+		"Weather",
+		"First Player",				
+		"1: Air Unit Refit",
+		"1: Reinforcement",				
+		"1: Breakout",
+		"1: Mode and Movement",
+		"1: Mode and Movement - Barrage",
+		"1: Supply",
+		"1: Reaction - Movement",
+		"1: Reaction - Barrage",
+		"1: Combat - Barrage",
+		"1: Combat - Ground",
+		"1: Exploit - Movement",
+		"1: Exploit - Barrage",
+		"1: Exploit - Ground",
+		"1: Clean up",				
+		"2: Air Unit Refit",
+		"2: Reinforcement",
+		"2: Breakout",
+		"2: Mode and Movement",
+		"2: Mode and Movement - Barrage",
+		"2: Supply",
+		"2: Reaction - Movement",
+		"2: Reaction - Barrage",
+		"2: Combat - Barrage",
+		"2: Combat - Ground",
+		"2: Exploit - Movement",
+		"2: Exploit - Barrage",
+		"2: Exploit - Ground",
+		"2: Clean up"
+    };    
 
     public Game() {
         players = new ArrayList<Player>();
@@ -71,23 +102,14 @@ public class Game {
     public void setTurns(int turns) {
         this.turns = turns;
     }
-
-    public int getDateIncr1() {
-        return dateIncr1;
-    }
-
-    public void setDateIncr1(int dateIncr1) {
-        this.dateIncr1 = dateIncr1;
-    }
-
-    public int getDateIncr2() {
-        return dateIncr2;
-    }
-
-    public void setDateIncr2(int dateIncr2) {
-        this.dateIncr2 = dateIncr2;
-    }
     
+    public void setTurnTable(ArrayList<Integer> turnTable) {
+        this.turnTable = turnTable;
+    }
+    public ArrayList<Integer> getTurnTable() {
+        return this.turnTable;
+    }
+
     public ArrayList<Player> getPlayers() {
         return players;
     }
@@ -99,4 +121,16 @@ public class Game {
     public void addPlayer(Player player) {
         this.players.add(player);
     }
+    
+    public String[] getPhases() {
+        return phases;
+    }
+    
+    public String getPhase(int phase) {
+        if (phase < 0)
+            return phases[0];
+        if (phase >= phases.length)
+            return phases[phases.length-1];
+        return phases[phase];
+    }    
 }

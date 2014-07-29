@@ -50,11 +50,8 @@ public class GameRepository {
             else if (name.equals("turns")) {
                 game.setTurns(reader.nextInt());
             } 
-            else if (name.equals("dateIncr1")) {
-                game.setDateIncr1(reader.nextInt());
-            } 
-            else if (name.equals("dateIncr2")) {
-                game.setDateIncr2(reader.nextInt());
+            else if (name.equals("turnTable") && reader.peek() != JsonToken.NULL) {
+                game.setTurnTable(readInts(reader));
             } 
             else if (name.equals("players") && reader.peek() != JsonToken.NULL) {
                 game.setPlayers(readPlayers(reader));
@@ -66,7 +63,6 @@ public class GameRepository {
         reader.endObject();
         return game;
     }
-    
     
     private static ArrayList<Player> readPlayers(JsonReader reader) throws IOException {
         ArrayList<Player> l = new ArrayList<Player>();
@@ -164,4 +160,16 @@ public class GameRepository {
         reader.endArray();
         return l;
     }
+    
+    private static ArrayList<Integer> readInts(JsonReader reader) throws IOException {
+        ArrayList<Integer> l = new ArrayList<Integer>();
+
+        reader.beginArray();
+        while (reader.hasNext()) {
+            l.add(reader.nextInt());
+        }
+        reader.endArray();
+        return l;
+    }
+    
 }

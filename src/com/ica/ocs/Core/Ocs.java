@@ -3,6 +3,7 @@ package com.ica.ocs.Core;
 import android.content.Context;
 import android.util.Log;
 import java.io.*;
+import java.text.*;
 import java.util.*;
 
 
@@ -64,14 +65,13 @@ public class Ocs {
         }
     }
     
-    /*
     public static void prevTurn(Game game, Saved saved) {
         int turn = saved.getTurn();
         if (--turn < 0) {
             turn = 0;
         }
-        else if (turn >= game.getTurns().size()) {
-            turn = game.getTurns().size() - 1;
+        else if (turn >= game.getTurns()) {
+            turn = game.getTurns() - 1;
         }
         saved.setTurn(turn);
     }
@@ -81,23 +81,56 @@ public class Ocs {
         if (turn < 0) {
             turn = 0;
         }
-        else if (++turn >= game.getTurns().size()) {
-            turn = game.getTurns().size() - 1;
+        else if (++turn >= game.getTurns()) {
+            turn = game.getTurns() - 1;
         }
         saved.setTurn(turn);
     }
     
     public static String getCurrentTurn(Game game, Saved saved) {
-        return game.getTurns().get(saved.getTurn());
+        Calendar start = game.getStartDate();
+        int year = start.get(Calendar.YEAR);
+        int month = start.get(Calendar.MONTH);
+        int lastday = start.getActualMaximum(Calendar.DAY_OF_MONTH);
+        int turn = saved.getTurn();
+        ArrayList<Integer> turns = game.getTurnTable();
+        int turnindex = getTurnIndex(game);
+		for (int i=0; i<turn; i++) {
+            turnindex++;
+			if (turnindex >= turns.size() || (turns.get(turnindex) > lastday)) {
+				turnindex = 0;
+				if (++month > Calendar.DECEMBER) {
+					year++;
+					month = Calendar.JANUARY;
+				}
+			}
+		}
+        int day = turns.get(turnindex);
+        Calendar current = Calendar.getInstance();
+        current.set(Calendar.YEAR, year);
+        current.set(Calendar.MONTH, month);
+        current.set(Calendar.DAY_OF_MONTH, day);
+        SimpleDateFormat tft = new SimpleDateFormat ("MMMM d, yyyy");
+        return tft.format(current.getTime());
+    }
+    private static int getTurnIndex(Game game) {
+        Calendar start = game.getStartDate();
+        int day = start.get(Calendar.DAY_OF_MONTH);
+        ArrayList<Integer> turns = game.getTurnTable();
+        for (int i=0; i<turns.size(); i++) {
+            if (day == turns.get(i))
+                return i;
+        }
+        return 0;
     }
     
     public static void prevPhase(Game game, Saved saved) {
         int phase = saved.getPhase();
 		if (--phase < 0) {
             prevTurn(game, saved);
-            phase = game.getPhases().size() - 1;
+            phase = game.getPhases().length - 1;
 		}
-		else if (phase >= game.getPhases().size()) {
+		else if (phase >= game.getPhases().length) {
             nextTurn(game, saved);
 		    phase = 0;
 		}
@@ -108,9 +141,9 @@ public class Ocs {
         int phase = saved.getPhase();
 		if (phase < 0) {
             prevTurn(game, saved);
-            phase = game.getPhases().size() - 1;
+            phase = game.getPhases().length - 1;
 		}
-		else if (++phase >= game.getPhases().size()) {
+		else if (++phase >= game.getPhases().length) {
             nextTurn(game, saved);
 		    phase = 0;
 		}
@@ -118,7 +151,6 @@ public class Ocs {
     }
     
     public static String getCurrentPhase(Game game, Saved saved) {
-        return game.getPhases().get(saved.getPhase());
+        return game.getPhase(saved.getPhase());
     }
-    */
 }
