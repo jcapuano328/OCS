@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.util.Log;
 
 import com.ica.ocs.AdminFragment;
+import com.ica.ocs.GroundFragment;
 /*
 import com.ica.ocs.BarrageFragment;
 import com.ica.ocs.CombatFragment;
@@ -24,9 +25,9 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
 		switch (index) {
 		case 0:
             return new AdminFragment();
-        /*
 		case 1:
-            return new CombatFragment();
+            return new GroundFragment();
+        /*
 		case 2:
             if (!customClassName.isEmpty()) {
                 try {

@@ -47,6 +47,7 @@ public class GameActivity extends FragmentActivity implements ActionBar.TabListe
         Intent intent = getIntent();
         game = Ocs.getGame(intent.getIntExtra ("Game", -1));
         saved = Ocs.getSaved(game);
+        saved.setGame(game.getId());
 
         setContentView(R.layout.game);		
 
