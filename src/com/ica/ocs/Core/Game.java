@@ -117,11 +117,24 @@ public class Game {
     public void setPlayers(ArrayList<Player> players) {
         this.players = players;
     }
-    
-    public void addPlayer(Player player) {
-        this.players.add(player);
+
+    public String[] getPlayerList() {
+        ArrayList<String> l = new ArrayList<String>();
+        for (Player p : players)
+            l.add(p.getName());
+        String[] a = new String[l.size()];
+        l.toArray(a);
+        return a;
     }
-    
+    public int getPlayerIndex(String p) {
+        for (int i=0; i<players.size(); i++) {
+            if (players.get(i).getName().equals(p))
+                return i;
+        }
+        return 0;
+    }
+
+
     public String[] getPhases() {
         return phases;
     }

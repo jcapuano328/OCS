@@ -34,5 +34,9 @@ public class Supply {
     public boolean inRange(int d) {
         return d < start || (d >= start && d <= end);
     }
+
+    public Effect find(int d) {
+        return Effect.find(d, this.effects);
+    }
 }
 

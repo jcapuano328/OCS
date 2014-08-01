@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dice="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1.0"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+        <TextView
+            android:text="Weather"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".15"
+            android:gravity="center_vertical"
+            android:id="@+id/lblAdminWeather" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".80"
+            android:id="@+id/txtAdminWeather" />
+        <ImageView
+            android:id="@+id/imgAdminWeatherDie1"
+            android:src="@drawable/die6_whiteblack_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:clickable="true" />
+        <ImageView
+            android:id="@+id/imgAdminWeatherDie2"
+            android:src="@drawable/die6_redwhite_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:clickable="true" />
+        <ImageView
+            android:id="@+id/imgAdminWeatherDie3"
+            android:src="@drawable/die6_bluewhite_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:clickable="true" />
+        <ImageView
+            android:id="@+id/imgAdminWeatherDie4"
+            android:src="@drawable/die6_greenwhite_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:clickable="true" />
+    </LinearLayout>
+            
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1.0"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+        <TextView
+            android:text="Initiative"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".15"
+            android:gravity="center_vertical"
+            android:id="@+id/lblAdminInitiative" />
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".80"
+            android:id="@+id/spinAdminInitiative" />
+            
+        <ImageView
+            android:id="@+id/imgAdminInitiativeDie1"
+            android:src="@drawable/die6_whiteblack_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:clickable="true" />
+        <ImageView
+            android:id="@+id/imgAdminInitiativeDie2"
+            android:src="@drawable/die6_redwhite_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:clickable="true" />
+        <ImageView
+            android:id="@+id/imgAdminInitiativeDie3"
+            android:src="@drawable/die6_blackred_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:clickable="true" />
+        <ImageView
+            android:id="@+id/imgAdminInitiativeDie4"
+            android:src="@drawable/die6_blackwhite_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:clickable="true" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+        
+        <TextView
+            android:text="Supply"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="left"
+            android:id="@+id/lblAdminSupply" />
+            
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1.0"
+            android:orientation="horizontal">
+            <TextView
+                android:text="Player1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight=".40"
+                android:gravity="center_vertical"
+                android:id="@+id/lblAdminSupplyPlayer1" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".60"
+                android:id="@+id/txtAdminSupplyPlayer1" />
+            <ImageView
+                android:id="@+id/imgAdminSupplyDie1"
+                android:src="@drawable/die6_whiteblack_1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:clickable="true" />
+            <ImageView
+                android:id="@+id/imgAdminSupplyDie2"
+                android:src="@drawable/die6_redwhite_1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:clickable="true" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1.0"
+            android:orientation="horizontal">
+            <TextView
+                android:text="Player2"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight=".40"
+                android:gravity="center_vertical"
+                android:id="@+id/lblAdminSupplyPlayer2" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".60"
+                android:id="@+id/txtAdminSupplyPlayer2" />
+            <ImageView
+                android:id="@+id/imgAdminSupplyDie3"
+                android:src="@drawable/die6_blackred_1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:clickable="true" />
+            <ImageView
+                android:id="@+id/imgAdminSupplyDie4"
+                android:src="@drawable/die6_blackwhite_1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:clickable="true" />
+        </LinearLayout>
+            
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+        
+        <TextView
+            android:text="Reinforcements"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="left"
+            android:id="@+id/lblAdminReinforcements" />
+            
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1.0"
+            android:orientation="horizontal">
+            <TextView
+                android:text="Player1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight=".40"
+                android:gravity="center_vertical"
+                android:id="@+id/lblAdminReinforcementsPlayer1" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".60"
+                android:id="@+id/txtAdminReinforcementsPlayer1" />
+            <ImageView
+                android:id="@+id/imgAdminReinforcementsDie1"
+                android:src="@drawable/die6_whiteblack_1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:clickable="true" />
+            <ImageView
+                android:id="@+id/imgAdminReinforcementsDie2"
+                android:src="@drawable/die6_redwhite_1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:clickable="true" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1.0"
+            android:orientation="horizontal">
+            <TextView
+                android:text="Player2"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight=".40"
+                android:gravity="center_vertical"
+                android:id="@+id/lblAdminReinforcementsPlayer2" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".60"
+                android:id="@+id/txtAdminReinforcementsPlayer2" />
+            <ImageView
+                android:id="@+id/imgAdminReinforcementsDie3"
+                android:src="@drawable/die6_blackred_1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:clickable="true" />
+            <ImageView
+                android:id="@+id/imgAdminReinforcementsDie4"
+                android:src="@drawable/die6_blackwhite_1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:clickable="true" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        
+        <Button
+            android:id="@+id/btnAdminDiceRoll"
+            android:text="Roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/red_button"
+            style="@style/button_text" />
+            
+        
+    </LinearLayout>
+        
+</LinearLayout>

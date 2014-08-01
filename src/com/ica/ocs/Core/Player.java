@@ -43,4 +43,21 @@ public class Player {
         this.reinforcements = reinforcements;
     }
 
+    public String findSupply(int dice, int turn) {
+        for (Supply s : supply) {
+            if (s.inRange(turn)) {
+                Effect e = s.find(dice);
+                if (e != null)
+                    return e.getEffect();
+            }
+        }
+        return "None";
+    }
+
+    public String findReinforcements(int dice, int turn) {
+        Effect e = Effect.find(dice, this.reinforcements);
+        if (e != null)
+            return e.getEffect();
+        return "None";
+    }
 }

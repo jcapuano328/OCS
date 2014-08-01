@@ -1,5 +1,7 @@
 package com.ica.ocs.Core;
 
+import java.util.ArrayList;
+
 public class Effect {
     private int lo;
     private int hi;
@@ -31,6 +33,15 @@ public class Effect {
 
     public boolean inRange(int d) {
         return d < lo || (d >= lo && d <= hi);
+    }
+
+    public static Effect find(int val, ArrayList<Effect> effects) {
+        for (Effect e : effects) {
+            if (e.inRange(val)) {
+                return e;
+            }
+        }
+        return null;
     }
 }
 

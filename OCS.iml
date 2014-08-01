@@ -4,6 +4,8 @@
     <facet type="android" name="Android">
       <configuration>
         <option name="UPDATE_PROPERTY_FILES" value="true" />
+        <option name="ENABLE_MANIFEST_MERGING" value="true" />
+        <includeAssetsFromLibraries>true</includeAssetsFromLibraries>
       </configuration>
     </facet>
   </component>
@@ -24,6 +26,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="dice" />
   </component>
 </module>
 
