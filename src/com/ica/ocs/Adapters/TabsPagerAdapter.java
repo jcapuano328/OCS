@@ -8,6 +8,7 @@ import android.util.Log;
 import com.ica.ocs.AdminFragment;
 import com.ica.ocs.GroundFragment;
 import com.ica.ocs.BarrageFragment;
+import com.ica.ocs.AirFragment;
 /*
 import com.ica.ocs.CombatFragment;
 import com.ica.ocs.VictoryFragment;
@@ -29,10 +30,8 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
             return new GroundFragment();
 		case 2:
             return new BarrageFragment();
-        /*
 		case 3:
-            return new VictoryFragment();
-        */
+            return new AirFragment();
 		}
 
 		return new Fragment();
