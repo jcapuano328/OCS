@@ -10,12 +10,14 @@ import com.ica.dice.*;
 
 public class BaseTabFragment {
 
+    protected Activity activity;
     protected View rootView;
     protected Dice dice;
 	protected PlayAudio audio;
     protected Air air;
 
     public BaseTabFragment(Activity activity, View rootView) {
+        this.activity = activity;
         this.rootView = rootView;
 		audio = new PlayAudio (activity);
         air = new Air();

@@ -8,11 +8,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.*;
 
-import java.util.*;
-
-import com.ica.ocs.Core.*;
 import com.ica.dice.*;
-
 
 public class AirCombatFragment extends BaseTabFragment {
 
