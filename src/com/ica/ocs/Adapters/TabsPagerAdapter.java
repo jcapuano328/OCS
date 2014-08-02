@@ -9,11 +9,7 @@ import com.ica.ocs.AdminFragment;
 import com.ica.ocs.GroundFragment;
 import com.ica.ocs.BarrageFragment;
 import com.ica.ocs.AirFragment;
-/*
-import com.ica.ocs.CombatFragment;
-import com.ica.ocs.VictoryFragment;
-import com.ica.ocs.DopFragment;
-*/
+import com.ica.ocs.SeaFragment;
 
 public class TabsPagerAdapter extends FragmentPagerAdapter {
 
@@ -32,6 +28,9 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
             return new BarrageFragment();
 		case 3:
             return new AirFragment();
+        case 4:
+            return new SeaFragment();
+
 		}
 
 		return new Fragment();
