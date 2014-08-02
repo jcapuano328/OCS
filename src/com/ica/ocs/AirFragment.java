@@ -34,7 +34,7 @@ public class AirFragment extends Fragment {
             
             createTab("aircombat", R.id.tabAirCombat, "Combat", new AirCombatFragment(getActivity(), rootView));
             createTab("airflak", R.id.tabAirFlak, "Flak", new AirFlakFragment(getActivity(), rootView));
-            createTab("airtransport", R.id.tabAirTransport, "Transport", new BaseTabFragment(getActivity(), rootView));
+            createTab("airtransport", R.id.tabAirTransport, "Transport", new AirTransportFragment(getActivity(), rootView));
             createTab("airbasecapture", R.id.tabAirBaseCapture, "Base Capture", new BaseTabFragment(getActivity(), rootView));
         }
         return rootView;
