@@ -7,8 +7,8 @@ import android.util.Log;
 
 import com.ica.ocs.AdminFragment;
 import com.ica.ocs.GroundFragment;
-/*
 import com.ica.ocs.BarrageFragment;
+/*
 import com.ica.ocs.CombatFragment;
 import com.ica.ocs.VictoryFragment;
 import com.ica.ocs.DopFragment;
@@ -27,19 +27,9 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
             return new AdminFragment();
 		case 1:
             return new GroundFragment();
-        /*
 		case 2:
-            if (!customClassName.isEmpty()) {
-                try {
-                    Class c = Class.forName("com.ica.ocs." + customClassName);
-                    Constructor constructor = c.getConstructor();
-                    return (Fragment)constructor.newInstance();
-                }
-                catch (Exception ex) {
-                    Log.e("Custom Activity", "Failed to launch custom activity", ex);
-                }
-            }
-            return new VictoryFragment();
+            return new BarrageFragment();
+        /*
 		case 3:
             return new VictoryFragment();
         */
