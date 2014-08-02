@@ -24,7 +24,7 @@
                 android:gravity="left" />
             
             <Spinner
-                android:id="@+id/spinAirBaseCaptureType" 
+                android:id="@+id/spinAirBaseCaptureState" 
                 android:layout_width="0dp"
                 android:layout_weight=".80"
                 android:layout_height="wrap_content"

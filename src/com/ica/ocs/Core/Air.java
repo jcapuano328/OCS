@@ -17,7 +17,7 @@ public class Air {
 	public String[] getAirBaseLevels() {
         return airBaseLevels;
 	}
-	public String[] getReductionState() {
+	public String[] getReductionStates() {
         return reductionStates;
 	}
 	public String[] getTransportTypes() {
