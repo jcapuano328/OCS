@@ -16,14 +16,13 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            android:layout_weight=".20"
             android:gravity="center_vertical"
-            android:id="@+id/lblAdminWeather" />
+            android:id="@+id/lblAdminWeather" android:layout_weight="0.40"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight=".80"
-            android:id="@+id/txtAdminWeather" android:text="clear" android:gravity="center_vertical|center_horizontal"/>
+            android:id="@+id/txtAdminWeather" android:text="clear" android:gravity="fill_horizontal|fill_vertical"/>
         <ImageView
             android:id="@+id/imgAdminWeatherDie1"
             android:src="@drawable/die6_whiteblack_1"
@@ -65,7 +64,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            android:layout_weight=".20"
+            android:layout_weight=".40"
             android:gravity="center_vertical"
             android:id="@+id/lblAdminInitiative" />
         <Spinner
@@ -135,7 +134,7 @@
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight=".60"
-                android:id="@+id/txtAdminSupplyPlayer1" android:gravity="center_vertical|center_horizontal"/>
+                android:id="@+id/txtAdminSupplyPlayer1" android:gravity="fill_horizontal|fill_vertical"/>
             <ImageView
                 android:id="@+id/imgAdminSupplyDie1"
                 android:src="@drawable/die6_whiteblack_1"
@@ -169,7 +168,7 @@
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight=".60"
-                android:id="@+id/txtAdminSupplyPlayer2" android:gravity="center_vertical|center_horizontal"/>
+                android:id="@+id/txtAdminSupplyPlayer2" android:gravity="fill_horizontal|fill_vertical"/>
             <ImageView
                 android:id="@+id/imgAdminSupplyDie3"
                 android:src="@drawable/die6_blackred_1"
@@ -219,7 +218,8 @@
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight=".60"
-                android:id="@+id/txtAdminReinforcementsPlayer1" android:gravity="fill_horizontal|fill_vertical"/>
+                android:id="@+id/txtAdminReinforcementsPlayer1" android:gravity="fill_horizontal|fill_vertical"
+                android:text="NA"/>
             <ImageView
                 android:id="@+id/imgAdminReinforcementsDie1"
                 android:src="@drawable/die6_whiteblack_1"
@@ -253,7 +253,8 @@
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight=".60"
-                android:id="@+id/txtAdminReinforcementsPlayer2" android:gravity="center_vertical|center_horizontal"/>
+                android:id="@+id/txtAdminReinforcementsPlayer2" android:gravity="fill_horizontal|fill_vertical"
+                android:text="NA"/>
             <ImageView
                 android:id="@+id/imgAdminReinforcementsDie3"
                 android:src="@drawable/die6_blackred_1"

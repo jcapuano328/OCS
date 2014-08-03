@@ -11,7 +11,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 
 import com.ica.dice.*;
 
-public class AirTransportFragment extends BaseTabFragment {
+public class AirTransportFragment extends AirBaseTabFragment {
 
     private Spinner spinAirTransportType;
     private Spinner spinAirTransportStatus;

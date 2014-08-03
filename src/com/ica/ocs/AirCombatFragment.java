@@ -10,7 +10,7 @@ import android.widget.*;
 
 import com.ica.dice.*;
 
-public class AirCombatFragment extends BaseTabFragment {
+public class AirCombatFragment extends AirBaseTabFragment {
 
 	private Button btnAirCombatAttackerPrev;
 	private Button btnAirCombatAttackerNext;

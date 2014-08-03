@@ -10,6 +10,7 @@ import com.ica.ocs.GroundFragment;
 import com.ica.ocs.BarrageFragment;
 import com.ica.ocs.AirFragment;
 import com.ica.ocs.SeaFragment;
+import com.ica.ocs.SupplyFragment;
 
 public class TabsPagerAdapter extends FragmentPagerAdapter {
 
@@ -20,17 +21,18 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
 	@Override
 	public Fragment getItem(int index) {
 		switch (index) {
-		case 0:
-            return new AdminFragment();
-		case 1:
-            return new GroundFragment();
-		case 2:
-            return new BarrageFragment();
-		case 3:
-            return new AirFragment();
-        case 4:
-            return new SeaFragment();
-
+            case 0:
+                return new AdminFragment();
+            case 1:
+                return new GroundFragment();
+            case 2:
+                return new BarrageFragment();
+            case 3:
+                return new AirFragment();
+            case 4:
+                return new SeaFragment();
+            case 5:
+                return new SupplyFragment();
 		}
 
 		return new Fragment();

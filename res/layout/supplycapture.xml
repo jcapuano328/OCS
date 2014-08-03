@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dice="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="5dp">
+            <RadioButton
+                    android:id="@+id/radioSupplyCaptureDump"
+                    android:text="Supply Dump"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent" android:checked="true"/>
+
+            <RadioButton
+                    android:id="@+id/radioSupplyCaptureTrucks"
+                    android:text="Trucks"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"/>
+
+            <RadioButton
+                    android:id="@+id/radioSupplyCaptureWagons"
+                    android:text="Wagons"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"/>
+            
+        </LinearLayout>
+    
+    
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1.0"
+                android:paddingBottom="10dp">
+        
+            <TextView
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+            
+            <TextView
+                android:text="Unit"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+            
+            <TextView
+                android:text="Supply"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="0dp"
+                android:layout_weight=".30"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+            
+        </LinearLayout>
+    
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1.0"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp">
+            <TextView
+                android:text="Start"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:gravity="left" />
+            
+            <EditText
+                android:id="@+id/edtSupplyCaptureStartUnit"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:gravity="center" android:inputType="number" android:numeric="integer"/>
+            
+            <EditText
+                android:id="@+id/edtSupplyCaptureStartSupply"
+                android:inputType="number"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:gravity="center" android:numeric="integer"/>
+            
+            <EditText
+                android:id="@+id/edtSupplyCaptureStartTokens"
+                android:inputType="number"
+                android:layout_width="0dp"
+                android:layout_weight=".10"
+                android:layout_height="wrap_content"
+                android:gravity="center" android:numeric="integer"/>
+            
+            <TextView
+                android:text="T"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="0dp"
+                android:layout_weight=".10"
+                android:layout_height="wrap_content"
+                android:gravity="left" />
+            
+        </LinearLayout>
+            
+            
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1.0"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp">
+            <TextView
+                android:text="Captured"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:gravity="left" />
+            
+            <TextView
+                android:id="@+id/txtSupplyCaptureCapturedUnit"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+            
+            <TextView
+                android:id="@+id/txtSupplyCaptureCapturedSupply"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+            
+            <TextView
+                android:id="@+id/txtSupplyCaptureCapturedTokens"
+                android:layout_width="0dp"
+                android:layout_weight=".10"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+            
+            <TextView
+                android:text="T"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="0dp"
+                android:layout_weight=".10"
+                android:layout_height="wrap_content"
+                android:gravity="left" />
+            
+        </LinearLayout>
+            
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1.0"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp">
+            <TextView
+                android:text="Remaining"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:gravity="left" />
+            
+            <TextView
+                android:id="@+id/txtSupplyCaptureRemainingUnit"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+            
+            <TextView
+                android:id="@+id/txtSupplyCaptureRemainingSupply"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+            
+            <TextView
+                android:id="@+id/txtSupplyCaptureRemainingTokens"
+                android:layout_width="0dp"
+                android:layout_weight=".10"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+            
+            <TextView
+                android:text="T"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="0dp"
+                android:layout_weight=".10"
+                android:layout_height="wrap_content"
+                android:gravity="left" />
+            
+        </LinearLayout>
+            
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1.0"
+                android:orientation="horizontal" android:paddingBottom="10dp" android:paddingTop="10dp">
+
+            <TextView
+                    android:text="Results"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="0dp"
+                    android:layout_weight=".20"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"/>
+
+            <TextView
+                    android:id="@+id/txtSupplyCaptureResults"
+                    android:text="NA"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="0dp"
+                    android:layout_weight=".30"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp" android:gravity="center_horizontal"
+            android:focusable="false">
+            
+            <ImageView
+                android:id="@+id/imgSupplyCaptureDie1"
+                android:src="@drawable/die6_bluewhite_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:clickable="true" android:layout_marginRight="5dp"/>
+            
+            <Button
+                android:id="@+id/btnSupplyCaptureDiceRoll"
+                android:text="Roll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/red_button"
+                style="@style/button_text" android:paddingLeft="10dp"/>
+            
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

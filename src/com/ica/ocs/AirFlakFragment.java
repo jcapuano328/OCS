@@ -11,7 +11,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 
 import com.ica.dice.*;
 
-public class AirFlakFragment extends BaseTabFragment {
+public class AirFlakFragment extends AirBaseTabFragment {
 
 
     private Spinner spinAirFlakBase;
