@@ -91,7 +91,7 @@
                 android:layout_width="0dp"
                 android:layout_weight=".20"
                 android:layout_height="wrap_content"
-                android:gravity="center" android:inputType="number" android:numeric="integer"/>
+                android:gravity="center" android:numeric="integer" android:inputType="number"/>
             
             <EditText
                 android:id="@+id/edtSupplyCaptureStartSupply"
@@ -257,7 +257,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/red_button"
                 style="@style/button_text" android:paddingLeft="10dp"/>
-            
+
         </LinearLayout>
 
     </LinearLayout>
