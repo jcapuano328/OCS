@@ -24,7 +24,7 @@
             android:paddingBottom="5dp">
             <TextView
                 android:text="Terrain"
-                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="0dp"
                 android:layout_weight=".20"
                 android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
             
             <TextView
                 android:text=""
-                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="0dp"
                 android:layout_weight=".20"
                 android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
             
             <TextView
                 android:text=""
-                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="0dp"
                 android:layout_weight=".20"
                 android:layout_height="wrap_content"
@@ -98,6 +98,7 @@
 
                 <TextView
                     android:text="Coastal Arty"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_width="0dp"
                     android:layout_weight=".20"
                     android:layout_height="wrap_content"/>
@@ -135,7 +136,7 @@
 
             <TextView
                     android:text="Results"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_width="0dp"
                     android:layout_weight=".20"
                     android:layout_height="wrap_content"
@@ -144,9 +145,9 @@
             <TextView
                     android:id="@+id/txtSeaResults"
                     android:text="NA"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_width="0dp"
-                    android:layout_weight=".80"
+                    android:layout_weight=".60"
                     android:layout_height="wrap_content"
                     android:gravity="center"/>
 

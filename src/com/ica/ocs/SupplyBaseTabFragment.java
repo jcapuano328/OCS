@@ -9,12 +9,12 @@ import com.ica.ocs.Core.*;
 
 public class SupplyBaseTabFragment extends BaseTabFragment{
 
-    protected SupplyOps supply;
+    protected Supply supply;
 
     public SupplyBaseTabFragment(Activity activity, View rootView) {
         super(activity, rootView);
         
-        supply = new SupplyOps();
+        supply = new Supply();
     }
 
     @Override

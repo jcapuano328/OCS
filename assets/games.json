@@ -1,6 +1,2095 @@
 [
 	{
-    	"id": 1,
+	    "id": 8,
+	    "name": "Guderian's Blitzkrieg",
+	    "desc": "The Campaign in Central Russia, Oct 1 1943 to May 30 1943",
+	    "image": "guderiansblitzkrieg",
+	    "startDate": "1941-10-01T12:00:00Z",
+	    "turns": "178",
+	    "turnTable": [
+	        1,
+	        5,
+	        8,
+	        12,
+	        15,
+	        19,
+	        22,
+	        26,
+	        29
+	    ],
+	    "weather": {
+	        "dice": {
+	            "number": 2,
+	            "sides": 6,
+	            "op": "D"
+	        },
+	        "effects": [
+	            {
+	                "turnStart": 1,
+	                "turnEnd": 178,
+	                "effects": [
+	                    {
+	                        "low": 1,
+	                        "high": 12,
+	                        "effect": ""
+	                    }
+	                ]
+	            }
+	        ]
+	    },
+	    "players": [
+	        {
+	            "player": "player1",
+	            "name": "Axis",
+	            "supply": [
+	                {
+	                    "turnStart": 1,
+	                    "turnEnd": 18,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 3,
+	                            "effect": "10"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "11"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 8,
+	                            "effect": "12"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 10,
+	                            "effect": "13"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 12,
+	                            "effect": "14"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 19,
+	                    "turnEnd": 36,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 3,
+	                            "effect": "7"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "8"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 8,
+	                            "effect": "9"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 10,
+	                            "effect": "10"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 12,
+	                            "effect": "11"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 37,
+	                    "turnEnd": 54,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 3,
+	                            "effect": "9"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "10"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 8,
+	                            "effect": "11"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 10,
+	                            "effect": "12"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 12,
+	                            "effect": "13"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 55,
+	                    "turnEnd": 178,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 3,
+	                            "effect": "14 / 10"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "15 / 11"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 8,
+	                            "effect": "16 / 12"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 10,
+	                            "effect": "17 / 13"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 12,
+	                            "effect": "18 / 14"
+	                        }
+	                    ]
+	                }
+	            ],
+	            "reinforcements": [
+	                {
+	                    "low": -99,
+	                    "high": 4,
+	                    "effect": "None"
+	                },
+	                {
+	                    "low": 5,
+	                    "high": 6,
+	                    "effect": "1 Pax"
+	                },
+	                {
+	                    "low": 7,
+	                    "high": 7,
+	                    "effect": "2 Pax, 1 Ftr"
+	                },
+	                {
+	                    "low": 8,
+	                    "high": 8,
+	                    "effect": "2 Pax, 1 Eq, 1 Ftr"
+	                },
+	                {
+	                    "low": 9,
+	                    "high": 9,
+	                    "effect": "2 Pax, 1 Eq, 1 Ftr, 1 Oth"
+	                },
+	                {
+	                    "low": 10,
+	                    "high": 10,
+	                    "effect": "2 Pax, 1 Eq, 2 Ftr, 1 Oth"
+	                },
+	                {
+	                    "low": 11,
+	                    "high": 99,
+	                    "effect": "2 Pax, 2 Eq, 2 Ftr, 1 Oth, 1 Trk"
+	                }
+	            ]
+	        },
+	        {
+	            "player": "player2",
+	            "name": "Soviet",
+	            "supply": [
+	                {
+	                    "turnStart": 1,
+	                    "turnEnd": 27,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 3,
+	                            "effect": "8"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "10"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 8,
+	                            "effect": "12"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 10,
+	                            "effect": "14"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 12,
+	                            "effect": "16"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 28,
+	                    "turnEnd": 54,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 3,
+	                            "effect": "10 / Mos:12"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "12 / Mos:14"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 8,
+	                            "effect": "14 / Mos:16"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 10,
+	                            "effect": "16 / Mos:18"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 12,
+	                            "effect": "18 / Mos:20"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 55,
+	                    "turnEnd": 135,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 3,
+	                            "effect": "12 / Mos:12"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "14 / Mos:14"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 8,
+	                            "effect": "16 / Mos:16"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 10,
+	                            "effect": "18 / Mos:18"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 12,
+	                            "effect": "20 / Mos:20"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 136,
+	                    "turnEnd": 178,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 3,
+	                            "effect": "15"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "17"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 8,
+	                            "effect": "19"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 10,
+	                            "effect": "20"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 12,
+	                            "effect": "22"
+	                        }
+	                    ]
+	                }
+	            ],
+	            "reinforcements": [
+	                {
+	                    "low": -99,
+	                    "high": 4,
+	                    "effect": "None"
+	                },
+	                {
+	                    "low": 5,
+	                    "high": 5,
+	                    "effect": "1 Pax"
+	                },
+	                {
+	                    "low": 6,
+	                    "high": 6,
+	                    "effect": "2 Pax"
+	                },
+	                {
+	                    "low": 7,
+	                    "high": 7,
+	                    "effect": "2 Pax, 1 Eq, 1 Ftr"
+	                },
+	                {
+	                    "low": 8,
+	                    "high": 8,
+	                    "effect": "2 Pax, 2 Eq, 1 Ftr, 1 IL-2"
+	                },
+	                {
+	                    "low": 9,
+	                    "high": 9,
+	                    "effect": "3 Pax, 2 Eq, 1 Ftr, 1 IL-2, 1 Pe-2"
+	                },
+	                {
+	                    "low": 10,
+	                    "high": 10,
+	                    "effect": "3 Pax, 2 Eq, 2 Ftr, 2 IL-2, 1 Pe-2, 1 Arty, 1 Trk"
+	                },
+	                {
+	                    "low": 11,
+	                    "high": 11,
+	                    "effect": "3 Pax, 2 Eq, 2 Ftr, 2 IL-2, 1 Pe-2, 1 Oth, 1 Arty, 1 Trk"
+	                },
+	                {
+	                    "low": 12,
+	                    "high": 99,
+	                    "effect": "4 Pax, 3 Eq, 3 Ftr, 2 IL-2, 1 Pe-2, 2 Oth, 2 Arty, 2 Trk"
+	                }
+	            ]
+	        }
+	    ]
+	},
+	{
+	    "id": 2,
+	    "name": "Enemy at the Gates",
+	    "desc": "The Stalingrad Pocket to Manstein's Counterattack",
+	    "image": "enemyatthegates",
+	    "startDate": "1942-11-19T12:00:00Z",
+	    "turns": "34",
+	    "turnTable": [
+	        1,
+	        5,
+	        8,
+	        12,
+	        15,
+	        19,
+	        22,
+	        26,
+	        29
+	    ],
+	    "weather": {
+	        "dice": {
+	            "number": 4,
+	            "sides": 6,
+	            "op": "E"
+	        },
+	        "effects": [
+	            {
+	                "turnStart": 0,
+	                "turnEnd": 0,
+	                "effects": [
+	                    {
+	                        "low": 0,
+	                        "high": 0,
+	                        "effect": ""
+	                    }
+	                ]
+	            }
+	        ]
+	    },
+	    "players": [
+	        {
+	            "player": "player1",
+	            "name": "Axis",
+	            "supply": [
+	                {
+	                    "turnStart": 1,
+	                    "turnEnd": 10,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 3,
+	                            "effect": "11"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "13"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 8,
+	                            "effect": "14"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 10,
+	                            "effect": "15"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 12,
+	                            "effect": "17"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 11,
+	                    "turnEnd": 16,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 3,
+	                            "effect": "13"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "15"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 8,
+	                            "effect": "16"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 10,
+	                            "effect": "17"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 12,
+	                            "effect": "19"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 17,
+	                    "turnEnd": 99,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 3,
+	                            "effect": "17"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "19"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 8,
+	                            "effect": "20"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 10,
+	                            "effect": "21"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 12,
+	                            "effect": "22"
+	                        }
+	                    ]
+	                }
+	            ],
+	            "reinforcements": [
+	                {
+	                    "low": 2,
+	                    "high": 6,
+	                    "effect": "None"
+	                },
+	                {
+	                    "low": 7,
+	                    "high": 9,
+	                    "effect": "1 Pax"
+	                },
+	                {
+	                    "low": 10,
+	                    "high": 10,
+	                    "effect": "1 Pax, 1 Eq"
+	                },
+	                {
+	                    "low": 11,
+	                    "high": 11,
+	                    "effect": "2 Pax, 1 Eq"
+	                },
+	                {
+	                    "low": 12,
+	                    "high": 12,
+	                    "effect": "3 Pax, 2 Eq"
+	                }
+	            ]
+	        },
+	        {
+	            "player": "player2",
+	            "name": "Soviet",
+	            "supply": [
+	                {
+	                    "turnStart": 1,
+	                    "turnEnd": 8,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 3,
+	                            "effect": "20"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "22"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 8,
+	                            "effect": "25"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 10,
+	                            "effect": "28"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 12,
+	                            "effect": "30"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 9,
+	                    "turnEnd": 99,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 3,
+	                            "effect": "25"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "27"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 8,
+	                            "effect": "30"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 10,
+	                            "effect": "33"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 12,
+	                            "effect": "35"
+	                        }
+	                    ]
+	                }
+	            ],
+	            "reinforcements": [
+	                {
+	                    "low": 2,
+	                    "high": 5,
+	                    "effect": "None"
+	                },
+	                {
+	                    "low": 6,
+	                    "high": 8,
+	                    "effect": "1 Pax"
+	                },
+	                {
+	                    "low": 9,
+	                    "high": 9,
+	                    "effect": "2 Pax, 1 Eq"
+	                },
+	                {
+	                    "low": 10,
+	                    "high": 10,
+	                    "effect": "2 Pax, 2 Eq, 1 Trk"
+	                },
+	                {
+	                    "low": 11,
+	                    "high": 11,
+	                    "effect": "3 Pax, 2 Eq, 1 Trk"
+	                },
+	                {
+	                    "low": 12,
+	                    "high": 12,
+	                    "effect": "3 Pax, 2 Eq, 2 Trk"
+	                }
+	            ]
+	        }
+	    ]
+	},
+	{
+	    "id": 3,
+	    "name": "Tunisia",
+	    "desc": "Then Tunisian Theater of Operations; November 1943 to May 1943",
+	    "image": "tunisia",
+	    "startDate": "1942-11-15T12:00:00Z",
+	    "turns": "58",
+	    "turnTable": [
+	        1,
+	        5,
+	        8,
+	        12,
+	        15,
+	        19,
+	        22,
+	        26,
+	        29
+	    ],
+	    "weather": {
+	        "dice": {
+	            "number": 2,
+	            "sides": 6,
+	            "op": "B"
+	        },
+	        "effects": [
+	            {
+	                "turnStart": 1,
+	                "turnEnd": 5,
+	                "effects": [
+	                    {
+	                        "low": 11,
+	                        "high": 53,
+	                        "effect": "Flight"
+	                    },
+	                    {
+	                        "low": 54,
+	                        "high": 64,
+	                        "effect": "No Flight"
+	                    },
+	                    {
+	                        "low": 65,
+	                        "high": 66,
+	                        "effect": "Mud"
+	                    }
+	                ]
+	            },
+	            {
+	                "turnStart": 6,
+	                "turnEnd": 23,
+	                "effects": [
+	                    {
+	                        "low": 11,
+	                        "high": 26,
+	                        "effect": "Flight"
+	                    },
+	                    {
+	                        "low": 31,
+	                        "high": 35,
+	                        "effect": "No Flight"
+	                    },
+	                    {
+	                        "low": 36,
+	                        "high": 66,
+	                        "effect": "Mud"
+	                    }
+	                ]
+	            },
+	            {
+	                "turnStart": 24,
+	                "turnEnd": 32,
+	                "effects": [
+	                    {
+	                        "low": 11,
+	                        "high": 55,
+	                        "effect": "Flight"
+	                    },
+	                    {
+	                        "low": 56,
+	                        "high": 63,
+	                        "effect": "No Flight"
+	                    },
+	                    {
+	                        "low": 64,
+	                        "high": 66,
+	                        "effect": "Mud"
+	                    }
+	                ]
+	            },
+	            {
+	                "turnStart": 33,
+	                "turnEnd": 41,
+	                "effects": [
+	                    {
+	                        "low": 11,
+	                        "high": 55,
+	                        "effect": "Flight"
+	                    },
+	                    {
+	                        "low": 56,
+	                        "high": 64,
+	                        "effect": "No Flight"
+	                    },
+	                    {
+	                        "low": 65,
+	                        "high": 66,
+	                        "effect": "Mud"
+	                    }
+	                ]
+	            },
+	            {
+	                "turnStart": 42,
+	                "turnEnd": 50,
+	                "effects": [
+	                    {
+	                        "low": 11,
+	                        "high": 62,
+	                        "effect": "Flight"
+	                    },
+	                    {
+	                        "low": 63,
+	                        "high": 65,
+	                        "effect": "No Flight"
+	                    },
+	                    {
+	                        "low": 66,
+	                        "high": 66,
+	                        "effect": "Mud"
+	                    }
+	                ]
+	            },
+	            {
+	                "turnStart": 51,
+	                "turnEnd": 58,
+	                "effects": [
+	                    {
+	                        "low": 11,
+	                        "high": 62,
+	                        "effect": "Flight"
+	                    },
+	                    {
+	                        "low": 63,
+	                        "high": 66,
+	                        "effect": "No Flight"
+	                    }
+	                ]
+	            }
+	        ]
+	    },
+	    "players": [
+	        {
+	            "player": "player1",
+	            "name": "Axis",
+	            "supply": [
+	                {
+	                    "turnStart": 1,
+	                    "turnEnd": 5,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 12,
+	                            "effect": "2"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 6,
+	                    "turnEnd": 14,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 12,
+	                            "effect": "3"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 15,
+	                    "turnEnd": 23,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 12,
+	                            "effect": "5"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 24,
+	                    "turnEnd": 32,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 12,
+	                            "effect": "4"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 33,
+	                    "turnEnd": 58,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 12,
+	                            "effect": "3"
+	                        }
+	                    ]
+	                }
+	            ],
+	            "reinforcements": [
+	                {
+	                    "low": 2,
+	                    "high": 8,
+	                    "effect": "None"
+	                },
+	                {
+	                    "low": 9,
+	                    "high": 9,
+	                    "effect": "1 Pax"
+	                },
+	                {
+	                    "low": 10,
+	                    "high": 12,
+	                    "effect": "1 Pax, 1 Eq"
+	                }
+	            ]
+	        },
+	        {
+	            "player": "player2",
+	            "name": "Allied",
+	            "supply": [
+	                {
+	                    "turnStart": 1,
+	                    "turnEnd": 23,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 12,
+	                            "effect": "3"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 24,
+	                    "turnEnd": 32,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 12,
+	                            "effect": "4"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 33,
+	                    "turnEnd": 58,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 12,
+	                            "effect": "6"
+	                        }
+	                    ]
+	                }
+	            ],
+	            "reinforcements": [
+	                {
+	                    "low": 2,
+	                    "high": 7,
+	                    "effect": "None"
+	                },
+	                {
+	                    "low": 8,
+	                    "high": 8,
+	                    "effect": "1 Pax"
+	                },
+	                {
+	                    "low": 9,
+	                    "high": 11,
+	                    "effect": "1 Pax, 1 Eq"
+	                },
+	                {
+	                    "low": 12,
+	                    "high": 12,
+	                    "effect": "2 Pax, 2 Eq, 1 Trk"
+	                }
+	            ]
+	        }
+	    ]
+	},
+	{
+	    "id": 4,
+	    "name": "Hube's Pocket",
+	    "desc": "Campaign in Western Ukraine from January to April 1944",
+	    "image": "hubespocket",
+	    "startDate": "1944-01-05T12:00:00Z",
+	    "turns": "32",
+	    "turnTable": [
+	        1,
+	        5,
+	        8,
+	        12,
+	        15,
+	        19,
+	        22,
+	        26,
+	        29
+	    ],
+	    "weather": {
+	        "dice": {
+	            "number": 2,
+	            "sides": 6,
+	            "op": "B"
+	        },
+	        "effects": [
+	            {
+	                "turnStart": 1,
+	                "turnEnd": 12,
+	                "effects": [
+	                    {
+	                        "low": 11,
+	                        "high": 12,
+	                        "effect": "Cold,Clear"
+	                    },
+	                    {
+	                        "low": 13,
+	                        "high": 14,
+	                        "effect": "Cold,Cloudy"
+	                    },
+	                    {
+	                        "low": 15,
+	                        "high": 16,
+	                        "effect": "Blizzard"
+	                    },
+	                    {
+	                        "low": 21,
+	                        "high": 32,
+	                        "effect": "Cool,Clear"
+	                    },
+	                    {
+	                        "low": 33,
+	                        "high": 41,
+	                        "effect": "Cool,Cloudy"
+	                    },
+	                    {
+	                        "low": 42,
+	                        "high": 46,
+	                        "effect": "Snow"
+	                    },
+	                    {
+	                        "low": 51,
+	                        "high": 54,
+	                        "effect": "Warm,Clear"
+	                    },
+	                    {
+	                        "low": 55,
+	                        "high": 61,
+	                        "effect": "Warm,Cloudy"
+	                    },
+	                    {
+	                        "low": 62,
+	                        "high": 63,
+	                        "effect": "Rain"
+	                    },
+	                    {
+	                        "low": 64,
+	                        "high": 64,
+	                        "effect": "Hot,Clear"
+	                    },
+	                    {
+	                        "low": 65,
+	                        "high": 65,
+	                        "effect": "Hot,Cloudy"
+	                    },
+	                    {
+	                        "low": 66,
+	                        "high": 66,
+	                        "effect": "Storm"
+	                    }
+	                ]
+	            },
+	            {
+	                "turnStart": 13,
+	                "turnEnd": 27,
+	                "effects": [
+	                    {
+	                        "low": 11,
+	                        "high": 12,
+	                        "effect": "Cold,Clear"
+	                    },
+	                    {
+	                        "low": 13,
+	                        "high": 13,
+	                        "effect": "Cold,Cloudy"
+	                    },
+	                    {
+	                        "low": 14,
+	                        "high": 14,
+	                        "effect": "Blizzard"
+	                    },
+	                    {
+	                        "low": 15,
+	                        "high": 25,
+	                        "effect": "Cool,Clear"
+	                    },
+	                    {
+	                        "low": 26,
+	                        "high": 33,
+	                        "effect": "Cool,Cloudy"
+	                    },
+	                    {
+	                        "low": 34,
+	                        "high": 36,
+	                        "effect": "Snow"
+	                    },
+	                    {
+	                        "low": 41,
+	                        "high": 46,
+	                        "effect": "Warm,Clear"
+	                    },
+	                    {
+	                        "low": 51,
+	                        "high": 54,
+	                        "effect": "Warm,Cloudy"
+	                    },
+	                    {
+	                        "low": 55,
+	                        "high": 61,
+	                        "effect": "Rain"
+	                    },
+	                    {
+	                        "low": 62,
+	                        "high": 63,
+	                        "effect": "Hot,Clear"
+	                    },
+	                    {
+	                        "low": 64,
+	                        "high": 65,
+	                        "effect": "Hot,Cloudy"
+	                    },
+	                    {
+	                        "low": 66,
+	                        "high": 66,
+	                        "effect": "Storm"
+	                    }
+	                ]
+	            },
+	            {
+	                "turnStart": 28,
+	                "turnEnd": 32,
+	                "effects": [
+	                    {
+	                        "low": 11,
+	                        "high": 11,
+	                        "effect": "Cold,Clear"
+	                    },
+	                    {
+	                        "low": 12,
+	                        "high": 12,
+	                        "effect": "Cold,Cloudy"
+	                    },
+	                    {
+	                        "low": 13,
+	                        "high": 13,
+	                        "effect": "Blizzard"
+	                    },
+	                    {
+	                        "low": 14,
+	                        "high": 21,
+	                        "effect": "Cool,Clear"
+	                    },
+	                    {
+	                        "low": 22,
+	                        "high": 24,
+	                        "effect": "Cool,Cloudy"
+	                    },
+	                    {
+	                        "low": 25,
+	                        "high": 26,
+	                        "effect": "Snow"
+	                    },
+	                    {
+	                        "low": 31,
+	                        "high": 33,
+	                        "effect": "Warm,Clear"
+	                    },
+	                    {
+	                        "low": 34,
+	                        "high": 42,
+	                        "effect": "Warm,Cloudy"
+	                    },
+	                    {
+	                        "low": 43,
+	                        "high": 46,
+	                        "effect": "Rain"
+	                    },
+	                    {
+	                        "low": 51,
+	                        "high": 55,
+	                        "effect": "Hot,Clear"
+	                    },
+	                    {
+	                        "low": 56,
+	                        "high": 63,
+	                        "effect": "Hot,Cloudy"
+	                    },
+	                    {
+	                        "low": 64,
+	                        "high": 66,
+	                        "effect": "Storm"
+	                    }
+	                ]
+	            }
+	        ]
+	    },
+	    "players": [
+	        {
+	            "player": "player1",
+	            "name": "Axis",
+	            "supply": [
+	                {
+	                    "turnStart": 1,
+	                    "turnEnd": 32,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 2,
+	                            "effect": "6"
+	                        },
+	                        {
+	                            "low": 3,
+	                            "high": 3,
+	                            "effect": "8"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "10"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 8,
+	                            "effect": "12"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 10,
+	                            "effect": "14"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 11,
+	                            "effect": "16"
+	                        },
+	                        {
+	                            "low": 12,
+	                            "high": 12,
+	                            "effect": "18"
+	                        }
+	                    ]
+	                }
+	            ],
+	            "reinforcements": [
+	                {
+	                    "low": 2,
+	                    "high": 6,
+	                    "effect": "None"
+	                },
+	                {
+	                    "low": 7,
+	                    "high": 7,
+	                    "effect": "1 Pax"
+	                },
+	                {
+	                    "low": 8,
+	                    "high": 8,
+	                    "effect": "1 Eq"
+	                },
+	                {
+	                    "low": 9,
+	                    "high": 10,
+	                    "effect": "1 Pax, 1 Eq"
+	                },
+	                {
+	                    "low": 11,
+	                    "high": 12,
+	                    "effect": "2 Pax, 2 Eq"
+	                }
+	            ]
+	        },
+	        {
+	            "player": "player2",
+	            "name": "Soviet",
+	            "supply": [
+	                {
+	                    "turnStart": 1,
+	                    "turnEnd": 32,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 2,
+	                            "effect": "8"
+	                        },
+	                        {
+	                            "low": 3,
+	                            "high": 3,
+	                            "effect": "11"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "12"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 8,
+	                            "effect": "15"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 10,
+	                            "effect": "19"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 11,
+	                            "effect": "22"
+	                        },
+	                        {
+	                            "low": 12,
+	                            "high": 12,
+	                            "effect": "24"
+	                        }
+	                    ]
+	                }
+	            ],
+	            "reinforcements": [
+	                {
+	                    "low": 2,
+	                    "high": 5,
+	                    "effect": "None"
+	                },
+	                {
+	                    "low": 6,
+	                    "high": 7,
+	                    "effect": "1 Pax"
+	                },
+	                {
+	                    "low": 8,
+	                    "high": 9,
+	                    "effect": "1 Pax, 1 Eq"
+	                },
+	                {
+	                    "low": 10,
+	                    "high": 10,
+	                    "effect": "1 Pax, 2 Eq"
+	                },
+	                {
+	                    "low": 11,
+	                    "high": 11,
+	                    "effect": "2 Pax, 3 Eq"
+	                },
+	                {
+	                    "low": 12,
+	                    "high": 12,
+	                    "effect": "3 Pax, 4 Eq"
+	                }
+	            ]
+	        }
+	    ]
+	},
+	{
+	    "id": 5,
+	    "name": "DAK",
+	    "desc": "The Campaign in North Afrika; 1940-1942",
+	    "image": "dak",
+	    "startDate": "1940-09-12T12:00:00Z",
+	    "turns": "239",
+	    "turnTable": [
+	        1,
+	        5,
+	        8,
+	        12,
+	        15,
+	        19,
+	        22,
+	        26,
+	        29
+	    ],
+	    "weather": {
+	        "dice": {
+	            "number": 4,
+	            "sides": 6,
+	            "op": "E"
+	        },
+	        "effects": [
+	            {
+	                "turnStart": 0,
+	                "turnEnd": 0,
+	                "effects": [
+	                    {
+	                        "low": 0,
+	                        "high": 0,
+	                        "effect": ""
+	                    }
+	                ]
+	            }
+	        ]
+	    },
+	    "players": [
+	        {
+	            "player": "player1",
+	            "name": "Axis",
+	            "supply": [],
+	            "reinforcements": [
+	                {
+	                    "low": 2,
+	                    "high": 9,
+	                    "effect": "None"
+	                },
+	                {
+	                    "low": 10,
+	                    "high": 10,
+	                    "effect": "1 Pax"
+	                },
+	                {
+	                    "low": 11,
+	                    "high": 12,
+	                    "effect": "2 Pax, 1 Eq"
+	                }
+	            ]
+	        },
+	        {
+	            "player": "player2",
+	            "name": "Allied",
+	            "supply": [],
+	            "reinforcements": [
+	                {
+	                    "low": 2,
+	                    "high": 7,
+	                    "effect": "None"
+	                },
+	                {
+	                    "low": 8,
+	                    "high": 9,
+	                    "effect": "1 Pax"
+	                },
+	                {
+	                    "low": 10,
+	                    "high": 10,
+	                    "effect": "2 Pax, 1 Eq"
+	                },
+	                {
+	                    "low": 11,
+	                    "high": 12,
+	                    "effect": "2 Pax, 2 Eq"
+	                }
+	            ]
+	        }
+	    ]
+	},
+	{
+	    "id": 6,
+	    "name": "Burma",
+	    "desc": "The Campaign in Northern Burma; 1944",
+	    "image": "burma",
+	    "startDate": "1944-03-05T12:00:00Z",
+	    "turns": "45",
+	    "turnTable": [
+	        1,
+	        5,
+	        8,
+	        12,
+	        15,
+	        19,
+	        22,
+	        26,
+	        29
+	    ],
+	    "weather": {
+	        "dice": {
+	            "number": 2,
+	            "sides": 6,
+	            "op": "B"
+	        },
+	        "effects": [
+	            {
+	                "turnStart": 1,
+	                "turnEnd": 27,
+	                "effects": [
+	                    {
+	                        "low": 11,
+	                        "high": 53,
+	                        "effect": "Clear"
+	                    },
+	                    {
+	                        "low": 54,
+	                        "high": 62,
+	                        "effect": "Lt Rain"
+	                    },
+	                    {
+	                        "low": 63,
+	                        "high": 65,
+	                        "effect": "Rain"
+	                    },
+	                    {
+	                        "low": 66,
+	                        "high": 66,
+	                        "effect": "Hvy Rain"
+	                    }
+	                ]
+	            },
+	            {
+	                "turnStart": 28,
+	                "turnEnd": 34,
+	                "effects": [
+	                    {
+	                        "low": 11,
+	                        "high": 36,
+	                        "effect": "Clear"
+	                    },
+	                    {
+	                        "low": 41,
+	                        "high": 53,
+	                        "effect": "Lt Rain"
+	                    },
+	                    {
+	                        "low": 54,
+	                        "high": 63,
+	                        "effect": "Rain"
+	                    },
+	                    {
+	                        "low": 64,
+	                        "high": 66,
+	                        "effect": "Hvy Rain"
+	                    }
+	                ]
+	            },
+	            {
+	                "turnStart": 35,
+	                "turnEnd": 45,
+	                "effects": [
+	                    {
+	                        "low": 11,
+	                        "high": 23,
+	                        "effect": "Clear"
+	                    },
+	                    {
+	                        "low": 24,
+	                        "high": 36,
+	                        "effect": "Lt Rain"
+	                    },
+	                    {
+	                        "low": 41,
+	                        "high": 53,
+	                        "effect": "Rain"
+	                    },
+	                    {
+	                        "low": 54,
+	                        "high": 66,
+	                        "effect": "Hvy Rain"
+	                    }
+	                ]
+	            }
+	        ]
+	    },
+	    "players": [
+	        {
+	            "player": "player1",
+	            "name": "Japanese",
+	            "supply": [
+	                {
+	                    "turnStart": 1,
+	                    "turnEnd": 45,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 3,
+	                            "effect": "0"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 7,
+	                            "effect": "1"
+	                        },
+	                        {
+	                            "low": 8,
+	                            "high": 9,
+	                            "effect": "2"
+	                        },
+	                        {
+	                            "low": 10,
+	                            "high": 10,
+	                            "effect": "3"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 11,
+	                            "effect": "4"
+	                        },
+	                        {
+	                            "low": 12,
+	                            "high": 12,
+	                            "effect": "5"
+	                        }
+	                    ]
+	                }
+	            ],
+	            "reinforcements": [
+	                {
+	                    "low": 2,
+	                    "high": 5,
+	                    "effect": "None"
+	                },
+	                {
+	                    "low": 6,
+	                    "high": 7,
+	                    "effect": "1/2 Bn"
+	                },
+	                {
+	                    "low": 8,
+	                    "high": 9,
+	                    "effect": "1 Bn"
+	                },
+	                {
+	                    "low": 10,
+	                    "high": 10,
+	                    "effect": "2 Bn"
+	                },
+	                {
+	                    "low": 11,
+	                    "high": 11,
+	                    "effect": "Other"
+	                },
+	                {
+	                    "low": 12,
+	                    "high": 12,
+	                    "effect": "Bn, Other"
+	                }
+	            ]
+	        },
+	        {
+	            "player": "player2",
+	            "name": "Allied",
+	            "supply": [
+	                {
+	                    "turnStart": 1,
+	                    "turnEnd": 45,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 3,
+	                            "effect": "2"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "3"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 7,
+	                            "effect": "4"
+	                        },
+	                        {
+	                            "low": 8,
+	                            "high": 8,
+	                            "effect": "5"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 9,
+	                            "effect": "6"
+	                        },
+	                        {
+	                            "low": 10,
+	                            "high": 10,
+	                            "effect": "7"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 11,
+	                            "effect": "8"
+	                        },
+	                        {
+	                            "low": 12,
+	                            "high": 12,
+	                            "effect": "9"
+	                        }
+	                    ]
+	                }
+	            ],
+	            "reinforcements": [
+	                {
+	                    "low": 2,
+	                    "high": 7,
+	                    "effect": "None"
+	                },
+	                {
+	                    "low": 8,
+	                    "high": 8,
+	                    "effect": "Sil"
+	                },
+	                {
+	                    "low": 9,
+	                    "high": 9,
+	                    "effect": "Ledo"
+	                },
+	                {
+	                    "low": 10,
+	                    "high": 10,
+	                    "effect": "Sil, 1 Eq"
+	                },
+	                {
+	                    "low": 11,
+	                    "high": 11,
+	                    "effect": "Ledo, 1 Eq"
+	                },
+	                {
+	                    "low": 12,
+	                    "high": 12,
+	                    "effect": "Sil, Ledo, 1 Eq"
+	                }
+	            ]
+	        }
+	    ]
+	},
+	{
+	    "id": 7,
+	    "name": "Sicily",
+	    "desc": "Triumph & Folly: The Campaign to Capture Sicily; 1943",
+	    "image": "sicily",
+	    "startDate": "1943-07-10T12:00:00Z",
+	    "turns": "30",
+	    "turnTable": [
+	        1,
+	        3,
+	        5,
+	        7,
+	        8,
+	        10,
+	        12,
+	        14,
+	        15,
+	        17,
+	        19,
+	        21,
+	        22,
+	        24,
+	        26,
+	        28,
+	        29,
+	        30
+	    ],
+	    "weather": {
+	        "dice": {
+	            "number": 2,
+	            "sides": 6,
+	            "op": "A"
+	        },
+	        "effects": [
+	            {
+	                "turnStart": 1,
+	                "turnEnd": 30,
+	                "effects": [
+	                    {
+	                        "low": 2,
+	                        "high": 12,
+	                        "effect": "Clear"
+	                    }
+	                ]
+	            }
+	        ]
+	    },
+	    "players": [
+	        {
+	            "player": "player1",
+	            "name": "Axis",
+	            "supply": [
+	                {
+	                    "turnStart": 1,
+	                    "turnEnd": 30,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 12,
+	                            "effect": "6"
+	                        }
+	                    ]
+	                }
+	            ],
+	            "reinforcements": [
+	                {
+	                    "low": 2,
+	                    "high": 8,
+	                    "effect": "None"
+	                },
+	                {
+	                    "low": 9,
+	                    "high": 9,
+	                    "effect": "1 Pax"
+	                },
+	                {
+	                    "low": 10,
+	                    "high": 10,
+	                    "effect": "1 Eq"
+	                },
+	                {
+	                    "low": 11,
+	                    "high": 11,
+	                    "effect": "1 Pax, 1 Eq"
+	                },
+	                {
+	                    "low": 12,
+	                    "high": 12,
+	                    "effect": "2 Pax, 1 Eq"
+	                }
+	            ]
+	        },
+	        {
+	            "player": "player2",
+	            "name": "Allied",
+	            "supply": [
+	                {
+	                    "turnStart": 1,
+	                    "turnEnd": 30,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 12,
+	                            "effect": "8"
+	                        }
+	                    ]
+	                }
+	            ],
+	            "reinforcements": [
+	                {
+	                    "low": 2,
+	                    "high": 6,
+	                    "effect": "None"
+	                },
+	                {
+	                    "low": 7,
+	                    "high": 7,
+	                    "effect": "1 Pax"
+	                },
+	                {
+	                    "low": 8,
+	                    "high": 8,
+	                    "effect": "1 Eq"
+	                },
+	                {
+	                    "low": 9,
+	                    "high": 9,
+	                    "effect": "1 Pax"
+	                },
+	                {
+	                    "low": 10,
+	                    "high": 10,
+	                    "effect": "1 Pax, 1 Eq"
+	                },
+	                {
+	                    "low": 11,
+	                    "high": 11,
+	                    "effect": "1 Pax, 2 Eq"
+	                },
+	                {
+	                    "low": 12,
+	                    "high": 12,
+	                    "effect": "2 Pax, 2 Eq"
+	                }
+	            ]
+	        }
+	    ]
+	},
+	{
+	    "id": 9,
+	    "name": "Korea",
+	    "desc": "The Forgotten War; June 1950 to June 1951",
+	    "image": "korea",
+	    "startDate": "1950-06-26T12:00:00Z",
+	    "turns": "109",
+	    "turnTable": [
+	        1,
+	        5,
+	        8,
+	        12,
+	        15,
+	        19,
+	        22,
+	        26,
+	        29
+	    ],
+	    "weather": {
+	        "dice": {
+	            "number": 1,
+	            "sides": 6,
+	            "op": "C"
+	        },
+	        "effects": [
+	            {
+	                "turnStart": 1,
+	                "turnEnd": 11,
+	                "effects": [
+	                    {
+	                        "low": 1,
+	                        "high": 2,
+	                        "effect": "No Flight"
+	                    },
+	                    {
+	                        "low": 3,
+	                        "high": 6,
+	                        "effect": "Flight"
+	                    }
+	                ]
+	            },
+	            {
+	                "turnStart": 12,
+	                "turnEnd": 20,
+	                "effects": [
+	                    {
+	                        "low": 1,
+	                        "high": 3,
+	                        "effect": "No Flight"
+	                    },
+	                    {
+	                        "low": 4,
+	                        "high": 6,
+	                        "effect": "Flight"
+	                    }
+	                ]
+	            },
+	            {
+	                "turnStart": 21,
+	                "turnEnd": 56,
+	                "effects": [
+	                    {
+	                        "low": 1,
+	                        "high": 2,
+	                        "effect": "No Flight"
+	                    },
+	                    {
+	                        "low": 3,
+	                        "high": 6,
+	                        "effect": "Flight"
+	                    }
+	                ]
+	            },
+	            {
+	                "turnStart": 57,
+	                "turnEnd": 83,
+	                "effects": [
+	                    {
+	                        "low": 1,
+	                        "high": 1,
+	                        "effect": "No Flight"
+	                    },
+	                    {
+	                        "low": 2,
+	                        "high": 6,
+	                        "effect": "Flight"
+	                    }
+	                ]
+	            },
+	            {
+	                "turnStart": 84,
+	                "turnEnd": 109,
+	                "effects": [
+	                    {
+	                        "low": 1,
+	                        "high": 2,
+	                        "effect": "No Flight"
+	                    },
+	                    {
+	                        "low": 3,
+	                        "high": 6,
+	                        "effect": "Flight"
+	                    }
+	                ]
+	            }
+	        ]
+	    },
+	    "players": [
+	        {
+	            "player": "player1",
+	            "name": "Communist",
+	            "supply": [
+	                {
+	                    "turnStart": 1,
+	                    "turnEnd": 29,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 3,
+	                            "effect": "1"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "2"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 8,
+	                            "effect": "2.5"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 10,
+	                            "effect": "3"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 12,
+	                            "effect": "4"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 30,
+	                    "turnEnd": 109,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 3,
+	                            "effect": "2"
+	                        },
+	                        {
+	                            "low": 4,
+	                            "high": 5,
+	                            "effect": "3"
+	                        },
+	                        {
+	                            "low": 6,
+	                            "high": 8,
+	                            "effect": "4"
+	                        },
+	                        {
+	                            "low": 9,
+	                            "high": 10,
+	                            "effect": "5"
+	                        },
+	                        {
+	                            "low": 11,
+	                            "high": 12,
+	                            "effect": "6"
+	                        }
+	                    ]
+	                }
+	            ],
+	            "reinforcements": [
+	                {
+	                    "low": 2,
+	                    "high": 5,
+	                    "effect": "None"
+	                },
+	                {
+	                    "low": 6,
+	                    "high": 8,
+	                    "effect": "1 Pax"
+	                },
+	                {
+	                    "low": 9,
+	                    "high": 10,
+	                    "effect": "2 Pax"
+	                },
+	                {
+	                    "low": 11,
+	                    "high": 12,
+	                    "effect": "2 Pax, 1 Eq"
+	                }
+	            ]
+	        },
+	        {
+	            "player": "player2",
+	            "name": "UN",
+	            "supply": [
+	                {
+	                    "turnStart": 1,
+	                    "turnEnd": 20,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 12,
+	                            "effect": "2.5"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 21,
+	                    "turnEnd": 29,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 12,
+	                            "effect": "5"
+	                        }
+	                    ]
+	                },
+	                {
+	                    "turnStart": 30,
+	                    "turnEnd": 109,
+	                    "effects": [
+	                        {
+	                            "low": 2,
+	                            "high": 12,
+	                            "effect": "4 (2.5)"
+	                        }
+	                    ]
+	                }
+	            ],
+	            "reinforcements": [
+	                {
+	                    "low": 2,
+	                    "high": 5,
+	                    "effect": "None"
+	                },
+	                {
+	                    "low": 6,
+	                    "high": 7,
+	                    "effect": "1 ROK Pax"
+	                },
+	                {
+	                    "low": 8,
+	                    "high": 9,
+	                    "effect": "1 ROK Pax, 1 UN Pax"
+	                },
+	                {
+	                    "low": 10,
+	                    "high": 12,
+	                    "effect": "2 ROK Pax, 1 UN Pax, 1 UN Eq"
+	                }
+	            ]
+	        }
+	    ]
+	},
+    
+	{
+    	"id": 13,
 	    "name": "Reluctant Enemies",
         "desc": "The Commonwealth Invasion of Lebanon and Syria",
         "image": "reluctantenemies",
@@ -9,6 +2098,26 @@
 	    "turnTable": [
         	1,3,5,7,8,10,12,14,15,17,19,21,22,24,26,28,29,30
         ],
+        "weather": {
+	        "dice": {
+	            "number": 2,
+	            "sides": 6,
+	            "op": "A"
+	        },
+	        "effects": [
+	            {
+	                "turnStart": 1,
+	                "turnEnd": 21,
+	                "effects": [
+	                    {
+	                        "low": 1,
+	                        "high": 12,
+	                        "effect": "Clear"
+	                    }
+	                ]
+	            }
+	        ]
+        },
         "players": [
         	{
 	            "player": "player1",
@@ -85,4 +2194,6 @@
 			}                
 		]
 	}
+    
+
 ]

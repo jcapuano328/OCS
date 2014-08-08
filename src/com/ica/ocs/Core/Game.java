@@ -13,6 +13,7 @@ public class Game {
     private Calendar startDate;
     private int turns;
     private ArrayList<Integer> turnTable;
+    private Weather weather;
     private ArrayList<Player> players;
     private static final String[] phases = {
 		"Weather",
@@ -108,6 +109,14 @@ public class Game {
     }
     public ArrayList<Integer> getTurnTable() {
         return this.turnTable;
+    }
+
+    public Weather getWeather() {
+        return weather;
+    }
+
+    public void setWeather(Weather weather) {
+        this.weather = weather;
     }
 
     public ArrayList<Player> getPlayers() {

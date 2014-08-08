@@ -6,12 +6,12 @@ package com.ica.ocs.Core;
 public class DiceDefinition {
     private int number;
     private int sides;
-    private String base;
+    private String op;
 
     public DiceDefinition() {
         number = 0;
         sides = 0;
-        base = "";
+        op = "";
     }
 
     public int getNumber() {
@@ -30,11 +30,15 @@ public class DiceDefinition {
         this.sides = sides;
     }
 
-    public String getBase() {
-        return base;
+    public String getOp() {
+        return op;
     }
 
-    public void setBase(String base) {
-        this.base = base;
+    public void setOp(String op) {
+        this.op = op;
+    }
+
+    public boolean isOp(String op) {
+        return this.op.equals(op);
     }
 }

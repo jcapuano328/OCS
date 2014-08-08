@@ -23,6 +23,7 @@
     <color name="white">#ffffff</color>
 	<color name="black">#000000</color>
 	<color name="yellow">#ffecf10d</color>
+    <color name="border">#ffd1cbca</color>
 
     <style name="button_text" >
         <item name="android:layout_width" >fill_parent</item>

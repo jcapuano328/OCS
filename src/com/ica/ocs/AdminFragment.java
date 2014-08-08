@@ -64,7 +64,6 @@ public class AdminFragment extends Fragment {
     private Saved saved;
     private Dice dice;
 	private PlayAudio audio;
-    private Weather weather;
     private Initiative initiative;
 
 
@@ -84,7 +83,6 @@ public class AdminFragment extends Fragment {
             saved = Ocs.getSaved(game);
         
             String[] players = game.getPlayerList();
-            weather = new Weather();
             initiative = new Initiative(players);
         
             rootView = inflater.inflate(R.layout.admin, container, false);
@@ -122,6 +120,18 @@ public class AdminFragment extends Fragment {
             imgAdminReinforcementsDie4 = (ImageView)rootView.findViewById(R.id.imgAdminReinforcementsDie4);
 
             btnAdminDiceRoll = (Button)rootView.findViewById(R.id.btnAdminDiceRoll);
+
+            Weather weather = game.getWeather();
+            int wxdice = weather.getDice().getNumber();
+            if (wxdice < 4) {
+                imgAdminWeatherDie4.setVisibility(View.INVISIBLE);
+            }
+            if (wxdice < 3) {
+                imgAdminWeatherDie3.setVisibility(View.INVISIBLE);
+            }
+            if (wxdice < 2) {
+                imgAdminWeatherDie2.setVisibility(View.INVISIBLE);
+            }
         
 		    spinAdminInitiative.setOnItemSelectedListener(new OnItemSelectedListener() {
                 public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
@@ -301,7 +311,9 @@ public class AdminFragment extends Fragment {
 	}
 
     void updateWeather() {
-		String result = weather.resolve(dice.getDie(0), dice.getDie(1), dice.getDie(2), dice.getDie(3));
+        int turn = saved.getTurn()+1;
+        Weather weather = game.getWeather();
+		String result = weather.resolve(turn, dice.getDie(0), dice.getDie(1), dice.getDie(2), dice.getDie(3));
         saved.setWeather(result);
         displayWeather();
     }

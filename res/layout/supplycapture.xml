@@ -18,21 +18,21 @@
             <RadioButton
                     android:id="@+id/radioSupplyCaptureDump"
                     android:text="Supply Dump"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent" android:checked="true"/>
 
             <RadioButton
                     android:id="@+id/radioSupplyCaptureTrucks"
                     android:text="Trucks"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"/>
 
             <RadioButton
                     android:id="@+id/radioSupplyCaptureWagons"
                     android:text="Wagons"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"/>
             
@@ -48,7 +48,7 @@
         
             <TextView
                 android:text=""
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="0dp"
                 android:layout_weight=".20"
                 android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
             android:paddingBottom="5dp">
             <TextView
                 android:text="Start"
-                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="0dp"
                 android:layout_weight=".20"
                 android:layout_height="wrap_content"
@@ -128,7 +128,7 @@
             android:paddingBottom="5dp">
             <TextView
                 android:text="Captured"
-                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="0dp"
                 android:layout_weight=".20"
                 android:layout_height="wrap_content"
@@ -173,7 +173,7 @@
             android:paddingBottom="5dp">
             <TextView
                 android:text="Remaining"
-                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="0dp"
                 android:layout_weight=".20"
                 android:layout_height="wrap_content"
@@ -218,7 +218,7 @@
 
             <TextView
                     android:text="Results"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_width="0dp"
                     android:layout_weight=".20"
                     android:layout_height="wrap_content"
@@ -227,9 +227,9 @@
             <TextView
                     android:id="@+id/txtSupplyCaptureResults"
                     android:text="NA"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_width="0dp"
-                    android:layout_weight=".30"
+                    android:layout_weight=".50"
                     android:layout_height="wrap_content"
                     android:gravity="center"/>
 

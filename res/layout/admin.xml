@@ -21,35 +21,35 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            android:layout_weight=".80"
+            android:layout_weight=".59"
             android:id="@+id/txtAdminWeather" android:text="clear" android:gravity="fill_horizontal|fill_vertical"/>
         <ImageView
             android:id="@+id/imgAdminWeatherDie1"
             android:src="@drawable/die6_whiteblack_1"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_gravity="center"
+            android:layout_gravity="right"
             android:clickable="true" />
         <ImageView
             android:id="@+id/imgAdminWeatherDie2"
             android:src="@drawable/die6_redwhite_1"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_gravity="center"
+            android:layout_gravity="right"
             android:clickable="true" />
         <ImageView
             android:id="@+id/imgAdminWeatherDie3"
             android:src="@drawable/die6_bluewhite_1"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_gravity="center"
+            android:layout_gravity="right"
             android:clickable="true" />
         <ImageView
             android:id="@+id/imgAdminWeatherDie4"
             android:src="@drawable/die6_greenwhite_1"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_gravity="center"
+            android:layout_gravity="right"
             android:clickable="true" />
     </LinearLayout>
             
@@ -70,7 +70,7 @@
         <Spinner
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight=".80"
+            android:layout_weight=".59"
             android:id="@+id/spinAdminInitiative" android:gravity="center|clip_horizontal"/>
             
         <ImageView

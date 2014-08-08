@@ -53,6 +53,9 @@ public class GameRepository {
             else if (name.equals("turnTable") && reader.peek() != JsonToken.NULL) {
                 game.setTurnTable(readInts(reader));
             } 
+            else if (name.equals("weather") && reader.peek() != JsonToken.NULL) {
+                game.setWeather(readWeather(reader));
+            } 
             else if (name.equals("players") && reader.peek() != JsonToken.NULL) {
                 game.setPlayers(readPlayers(reader));
             } 
@@ -63,6 +66,28 @@ public class GameRepository {
         reader.endObject();
         return game;
     }
+    
+    private static Weather readWeather(JsonReader reader) throws IOException {
+        Weather w = new Weather();
+        
+        reader.beginObject();
+        while (reader.hasNext()) {
+            String name = reader.nextName();
+            if (name.equals("dice")) {
+                w.setDice(readDiceDefinition(reader));
+            }
+            else if (name.equals("effects")) {
+                w.setEffects(readTurnEffects(reader));
+            }
+            else {
+                reader.skipValue();
+            }
+        }
+        reader.endObject();
+        
+        return w;
+    }
+    
     
     private static ArrayList<Player> readPlayers(JsonReader reader) throws IOException {
         ArrayList<Player> l = new ArrayList<Player>();
@@ -86,7 +111,7 @@ public class GameRepository {
                 p.setName(reader.nextString());
             }
             else if (name.equals("supply") && reader.peek() != JsonToken.NULL) {
-                p.setSupply(readSupplies(reader));
+                p.setSupply(readTurnEffects(reader));
             } 
             else if (name.equals("reinforcements") && reader.peek() != JsonToken.NULL) {
                 p.setReinforcements(readEffects(reader));
@@ -99,38 +124,38 @@ public class GameRepository {
         return p;
     }
     
-    private static ArrayList<Supply> readSupplies(JsonReader reader) throws IOException {
-        ArrayList<Supply> l = new ArrayList<Supply>();
+    private static ArrayList<TurnEffects> readTurnEffects(JsonReader reader) throws IOException {
+        ArrayList<TurnEffects> l = new ArrayList<TurnEffects>();
         
         reader.beginArray();
         while (reader.hasNext()) {
-            l.add(readSupply(reader));
+            l.add(readTurnEffect(reader));
         }            
         reader.endArray();
         return l;
     }
-    private static Supply readSupply(JsonReader reader) throws IOException {
-        Supply s = new Supply();
+    
+    private static TurnEffects readTurnEffect(JsonReader reader) throws IOException {
+        TurnEffects te = new TurnEffects();
         reader.beginObject();
         while (reader.hasNext()) {
             String name = reader.nextName();
             if (name.equals("turnStart")) {
-                s.setStart(reader.nextInt());
+                te.setStart(reader.nextInt());
             }
             else if (name.equals("turnEnd")) {
-                s.setEnd(reader.nextInt());
+                te.setEnd(reader.nextInt());
             }
             else if (name.equals("effects") && reader.peek() != JsonToken.NULL) {
-                s.setEffects(readEffects(reader));
+                te.setEffects(readEffects(reader));
             } 
             else {
                 reader.skipValue();
             }
         }
         reader.endObject();
-        return s;
+        return te;
     }
-    
     private static ArrayList<Effect> readEffects(JsonReader reader) throws IOException {
         ArrayList<Effect> l = new ArrayList<Effect>();
         
@@ -159,6 +184,28 @@ public class GameRepository {
      
         reader.endArray();
         return l;
+    }
+    
+    private static DiceDefinition readDiceDefinition(JsonReader reader) throws IOException {
+        DiceDefinition dd = new DiceDefinition();
+        reader.beginObject();
+        while (reader.hasNext()) {
+            String name = reader.nextName();
+            if (name.equals("number")) {
+                dd.setNumber(reader.nextInt());
+            }
+            else if (name.equals("sides")) {
+                dd.setSides(reader.nextInt());
+            }
+            else if (name.equals("op")) {
+                dd.setOp(reader.nextString());
+            }
+            else {
+                reader.skipValue();
+            }
+        }
+        reader.endObject();
+        return dd;
     }
     
     private static ArrayList<Integer> readInts(JsonReader reader) throws IOException {

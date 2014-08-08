@@ -19,7 +19,7 @@
         
             <TextView
                 android:text=""
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="0dp"
                 android:layout_weight=".20"
                 android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
             android:paddingBottom="5dp">
             <TextView
                 android:text="Start"
-                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="0dp"
                 android:layout_weight=".20"
                 android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
             android:paddingBottom="5dp">
             <TextView
                 android:text="Remaining"
-                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="0dp"
                 android:layout_weight=".20"
                 android:layout_height="wrap_content"
@@ -121,7 +121,7 @@
 
             <TextView
                     android:text="Results"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_width="0dp"
                     android:layout_weight=".20"
                     android:layout_height="wrap_content"
@@ -130,7 +130,7 @@
             <TextView
                     android:id="@+id/txtSupplyDestructionResults"
                     android:text="NA"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_width="0dp"
                     android:layout_weight=".30"
                     android:layout_height="wrap_content"

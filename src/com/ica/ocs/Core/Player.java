@@ -5,7 +5,7 @@ import java.util.*;
 public class Player {
     private String player;
     private String name;
-    private ArrayList<Supply> supply;
+    private ArrayList<TurnEffects> supply;
     private ArrayList<Effect> reinforcements;
     
     public Player() {
@@ -27,11 +27,11 @@ public class Player {
         this.name = name;
     }
 
-    public ArrayList<Supply> getSupply() {
+    public ArrayList<TurnEffects> getSupply() {
         return supply;
     }
 
-    public void setSupply(ArrayList<Supply> supply) {
+    public void setSupply(ArrayList<TurnEffects> supply) {
         this.supply = supply;
     }
 
@@ -44,7 +44,7 @@ public class Player {
     }
 
     public String findSupply(int dice, int turn) {
-        for (Supply s : supply) {
+        for (TurnEffects s : supply) {
             if (s.inRange(turn)) {
                 Effect e = s.find(dice);
                 if (e != null)

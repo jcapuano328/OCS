@@ -28,3 +28,4 @@ proguard_logs/
 
 *.pst
 doc/
+node_modules/
