@@ -49,7 +49,7 @@ public class Air {
         return results;            
 	}
 	
-	public String flak(int dice, int airbase, int intrinsic, boolean density, boolean hq, int patrol, boolean trainbusting) {
+	public String flak(int dice, int die, int size, int airbase, int intrinsic, boolean density, boolean hq, int patrol, boolean trainbusting) {
 		String results = "";
 		int flak = getAirBaseFlakValue(airbase);
 		flak += intrinsic;
@@ -61,8 +61,62 @@ public class Air {
 		dice += flak;
 		if (dice < 11)
 			results = "NE";				
-		else
-			results = "Loss";
+		else {
+            results = "Loss";
+            if (die == 1) {
+                results += " : #1";
+            }
+            else if (die == 2) {
+                if (size < 4) {
+                    results += " : #2";
+                }
+                else {
+                    results += " : #1";
+                }
+            }
+            else if (die == 3) {
+                if (size < 3) {
+                    results += " : #1";
+                }
+                else if (size < 4) {
+                    results += " : #2";
+                }
+                else {
+                    results += " : #3";
+                }
+            }
+            else if (die == 4) {
+                if (size < 4) {
+                    results += " : #2";
+                }
+                else {
+                    results += " : #4";
+                }
+            }
+            else if (die == 5) {
+                if (size < 3) {
+                    results += " : #2";
+                }
+                else if (size < 4) {
+                    results += " : #3";
+                }
+                else {
+                    results += " : Weakest";
+                }
+            }
+            else if (die == 6) {
+                if (size < 3) {
+                    results += " : #2";
+                }
+                else if (size < 4) {
+                    results += " : #3";
+                }
+                else {
+                    results += " : Strongest";
+                }
+            }
+        }
+
         return results;            
 	}
 	

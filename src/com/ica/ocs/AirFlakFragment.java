@@ -13,6 +13,9 @@ import com.ica.dice.*;
 
 public class AirFlakFragment extends AirBaseTabFragment {
 
+	private Button btnAirFlakSizePrev;
+	private Button btnAirFlakSizeNext;
+	private EditText editAirFlakSize;
 
     private Spinner spinAirFlakBase;
 
@@ -31,6 +34,7 @@ public class AirFlakFragment extends AirBaseTabFragment {
     
     private ImageView imgAirFlakDie1;
     private ImageView imgAirFlakDie2;
+    private ImageView imgAirFlakDie3;
 	private Button btnAirFlakDiceRoll;
     
     private int airbase = 0;
@@ -39,11 +43,15 @@ public class AirFlakFragment extends AirBaseTabFragment {
     public AirFlakFragment(Activity activity, View rootView) {
         super(activity, rootView);
     
-		dice = new Dice(2, 1, 6);
+		dice = new Dice(3, 1, 6);
     }
 	
     @Override
     public void create() {
+        
+		btnAirFlakSizePrev = (Button)rootView.findViewById(R.id.btnAirFlakSizePrev);
+		btnAirFlakSizeNext = (Button)rootView.findViewById(R.id.btnAirFlakSizeNext);
+		editAirFlakSize = (EditText)rootView.findViewById(R.id.editAirFlakSize);
         
         spinAirFlakBase = (Spinner )rootView.findViewById(R.id.spinAirFlakBase);
         
@@ -60,6 +68,7 @@ public class AirFlakFragment extends AirBaseTabFragment {
     
         imgAirFlakDie1 = (ImageView  )rootView.findViewById(R.id.imgAirFlakDie1);
         imgAirFlakDie2 = (ImageView  )rootView.findViewById(R.id.imgAirFlakDie2);
+        imgAirFlakDie3 = (ImageView  )rootView.findViewById(R.id.imgAirFlakDie3);
         btnAirFlakDiceRoll = (Button)rootView.findViewById(R.id.btnAirFlakDiceRoll);
     
 		editAirFlakShip.setText("0");
@@ -73,6 +82,36 @@ public class AirFlakFragment extends AirBaseTabFragment {
         spinAirFlakPatrolZone.setAdapter(pzadapter);
         
         // event handlers
+		btnAirFlakSizePrev.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+			    int value = getSize();
+			    if (--value < 0) value = 0;
+			    editAirFlakSize.setText(Integer.toString(value));
+			    //updateResults();
+			}
+		});
+		btnAirFlakSizeNext.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+			    int value = getSize();
+			    editAirFlakSize.setText(Integer.toString(++value));
+			    //updateResults();
+			}
+		});
+		editAirFlakSize.addTextChangedListener(new TextWatcher() {
+			@Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+			@Override
+            public void onTextChanged(CharSequence s, int start, int before, int end) {
+            }
+			@Override
+            public void afterTextChanged(Editable s) {
+			    updateResults();
+            }
+        });
+        
 		spinAirFlakBase.setOnItemSelectedListener(new OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                 airbase = pos;
@@ -158,6 +197,14 @@ public class AirFlakFragment extends AirBaseTabFragment {
                 updateResults();
 			}
 		});
+        imgAirFlakDie3.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                dice.increment(2);
+                displayDice();
+                updateResults();
+            }
+        });
 
 		btnAirFlakDiceRoll.setOnClickListener(new OnClickListener() {
 			@Override
@@ -175,8 +222,9 @@ public class AirFlakFragment extends AirBaseTabFragment {
     
 	void updateResults() {
         int flakdice = dice.getDie(0) + dice.getDie(1);
+        int lossdie = dice.getDie(2);
 				
-        String result = air.flak(flakdice, airbase, getShip(), getManyAircraft(), getHQ(), patrolzone, getTrainbusting());
+        String result = air.flak(flakdice, lossdie, getSize(), airbase, getShip(), getManyAircraft(), getHQ(), patrolzone, getTrainbusting());
         txtAirFlakResults.setText(result, TextView.BufferType.NORMAL);
 	}
 
@@ -185,6 +233,13 @@ public class AirFlakFragment extends AirBaseTabFragment {
 		dice.set(1, DieColor.RED_WHITE,   imgAirFlakDie2);
 	}
 
+	int getSize() {
+        String v = editAirFlakSize.getText().toString();
+        if (!v.isEmpty())
+            return Integer.parseInt(v);
+        return 1;           
+	}
+    
 	int getShip() {
         String v = editAirFlakShip.getText().toString();
         if (!v.isEmpty())

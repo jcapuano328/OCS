@@ -10,6 +10,45 @@
             android:orientation="vertical">
 
         <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1.0"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp">
+
+            <TextView
+                    android:text="Mission Size"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="0dp"
+                    android:layout_weight=".20"
+                    android:layout_height="wrap_content"/>
+            <Button
+                    android:id="@+id/btnAirFlakSizePrev"
+                    android:text="-"
+                    android:layout_width="0dp"
+                    android:layout_weight=".15"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/blue_button"
+                    style="@style/button_text" />
+            <EditText
+                    android:id="@+id/editAirFlakSize"
+                    android:inputType="numberDecimal"
+                    android:layout_width="0dp"
+                    android:layout_weight=".30"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+            <Button
+                    android:id="@+id/btnAirFlakSizeNext"
+                    android:text="+"
+                    android:layout_width="0dp"
+                    android:layout_weight=".15"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/blue_button"
+                    style="@style/button_text" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:weightSum="1.0"
@@ -183,7 +222,14 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:clickable="true" android:layout_marginRight="5dp"/>
-            
+            <ImageView
+                    android:id="@+id/imgAirFlakDie3"
+                    android:src="@drawable/die6_bluewhite_1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:clickable="true" android:layout_marginRight="5dp"/>
+
             <Button
                 android:id="@+id/btnAirFlakDiceRoll"
                 android:text="Roll"
