@@ -136,7 +136,6 @@ public class Barrage {
 		initGroundEffects();
 		initFacilityEffects();
 		initShipToShoreEffects();
-        initSupplyTransportEffects();
 	}
 	
 	private void initGroundEffects() {
@@ -162,28 +161,18 @@ public class Barrage {
 		facilityEffects.add(new BarrageEffect("41 to 80 - 6T",   new String[] {"(5)",  "1(4)",  "1(4)", "1*(4)", "2*(4)",  "2*(3)"}));
 		facilityEffects.add(new BarrageEffect("81 or more - 8T", new String[] {"1(5)",  "1(4)",  "1(4)",  "2*(4)", "2*(3)",  "2*(3)"}));
 	}
-	private void initSupplyTransportEffects() {
-		shipToShoreEffects.add(new BarrageEffect("1 or 1 - 1T",     new String[] {"0", "0", "0", "0", ".05", ".05"}));
-		shipToShoreEffects.add(new BarrageEffect("2 to 4 - 1T",     new String[] {"0", "0", "0", ".05", ".05", ".1"}));
-		shipToShoreEffects.add(new BarrageEffect("5 to 8 - 1T",     new String[] {"0", "0", ".05", ".05", ".1", ".1"}));
-		shipToShoreEffects.add(new BarrageEffect("9 to 12 - 2T",    new String[] {"0", ".05", ".05", ".1", ".1", ".15"}));
-		shipToShoreEffects.add(new BarrageEffect("13 to 24 - 3T",   new String[] {".05", ".05", ".1", ".1", ".15", ".2"}));
-		shipToShoreEffects.add(new BarrageEffect("25 or 48 - 4T",   new String[] {".05", ".1", ".1", ".15", ".2", ".25"}));
-		shipToShoreEffects.add(new BarrageEffect("49 or 62 - 6T",   new String[] {".1", ".1", ".15", ".2", ".25", ".3"}));
-		shipToShoreEffects.add(new BarrageEffect("63 or more - 8T", new String[] {".1", ".15", ".2", ".25", ".3", ".3"}));
-	}
 	private void initShipToShoreEffects() {
-		shipToShipEffects.add(new BarrageEffect("1 or less - 1T",    new String[] {"NE", "NE", "NE", "NE", "NE", "NE", "NE", "NE", "NE", "DG", "DG"}));
-		shipToShipEffects.add(new BarrageEffect("2 to 2 - 1T",       new String[] {"NE", "NE", "NE", "NE", "NE", "NE", "NE", "NE", "DG", "DG", "DG"}));
-		shipToShipEffects.add(new BarrageEffect("3 to 4 - 2T",       new String[] {"NE", "NE", "NE", "NE", "NE", "NE", "NE", "DG", "DG", "DG", "DG"}));
-		shipToShipEffects.add(new BarrageEffect("5 to 7 - 2T",       new String[] {"NE", "NE", "NE", "NE", "NE", "NE", "DG", "DG", "DG", "DG", "DG"}));
-		shipToShipEffects.add(new BarrageEffect("8 to 11 - 2T",      new String[] {"NE", "NE", "NE", "NE", "NE", "DG", "DG", "DG", "DG", "DG", "DG"}));
-		shipToShipEffects.add(new BarrageEffect("12 to 16 - 3T",     new String[] {"NE", "NE", "NE", "NE", "DG", "DG", "DG", "DG", "DG", "DG", "1/2"}));
-		shipToShipEffects.add(new BarrageEffect("17 to 24 - 3T",     new String[] {"NE", "NE", "NE", "DG", "DG", "DG", "DG", "DG", "DG", "DG", "1/2"}));
-		shipToShipEffects.add(new BarrageEffect("25 to 40 - 4T",     new String[] {"NE", "NE", "DG", "DG", "DG", "DG", "DG", "DG", "DG", "DG", "1/2"}));
-		shipToShipEffects.add(new BarrageEffect("41 to 68 - 5T",     new String[] {"NE", "DG", "DG", "DG", "DG", "DG", "DG", "DG", "DG", "1/2", "1/2"}));
-		shipToShipEffects.add(new BarrageEffect("69 to 116 - 8T",    new String[] {"DG", "DG", "DG", "DG", "DG", "DG", "DG", "DG", "1/2", "1/2", "2"}));
-		shipToShipEffects.add(new BarrageEffect("117 or more - 10T", new String[] {"DG", "DG", "DG", "DG", "DG", "DG", "DG", "DG", "1/2", "1", "2"}));
+        shipToShoreEffects.add(new BarrageEffect("1 or less - 1T",    new String[] {"NE", "NE", "NE", "NE", "NE", "NE", "NE", "NE", "NE", "DG", "DG"}));
+        shipToShoreEffects.add(new BarrageEffect("2 to 2 - 1T",       new String[] {"NE", "NE", "NE", "NE", "NE", "NE", "NE", "NE", "DG", "DG", "DG"}));
+        shipToShoreEffects.add(new BarrageEffect("3 to 4 - 2T",       new String[] {"NE", "NE", "NE", "NE", "NE", "NE", "NE", "DG", "DG", "DG", "DG"}));
+        shipToShoreEffects.add(new BarrageEffect("5 to 7 - 2T",       new String[] {"NE", "NE", "NE", "NE", "NE", "NE", "DG", "DG", "DG", "DG", "DG"}));
+        shipToShoreEffects.add(new BarrageEffect("8 to 11 - 2T",      new String[] {"NE", "NE", "NE", "NE", "NE", "DG", "DG", "DG", "DG", "DG", "DG"}));
+        shipToShoreEffects.add(new BarrageEffect("12 to 16 - 3T",     new String[] {"NE", "NE", "NE", "NE", "DG", "DG", "DG", "DG", "DG", "DG", "1/2"}));
+        shipToShoreEffects.add(new BarrageEffect("17 to 24 - 3T",     new String[] {"NE", "NE", "NE", "DG", "DG", "DG", "DG", "DG", "DG", "DG", "1/2"}));
+        shipToShoreEffects.add(new BarrageEffect("25 to 40 - 4T",     new String[] {"NE", "NE", "DG", "DG", "DG", "DG", "DG", "DG", "DG", "DG", "1/2"}));
+        shipToShoreEffects.add(new BarrageEffect("41 to 68 - 5T",     new String[] {"NE", "DG", "DG", "DG", "DG", "DG", "DG", "DG", "DG", "1/2", "1/2"}));
+        shipToShoreEffects.add(new BarrageEffect("69 to 116 - 8T",    new String[] {"DG", "DG", "DG", "DG", "DG", "DG", "DG", "DG", "1/2", "1/2", "2"}));
+        shipToShoreEffects.add(new BarrageEffect("117 or more - 10T", new String[] {"DG", "DG", "DG", "DG", "DG", "DG", "DG", "DG", "1/2", "1", "2"}));
 	}
 
     private ArrayList<BarrageEffect> getBarrageEffects(int type) {
