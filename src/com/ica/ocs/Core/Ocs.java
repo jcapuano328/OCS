@@ -127,12 +127,16 @@ public class Ocs {
     public static void prevPhase(Game game, Saved saved) {
         int phase = saved.getPhase();
 		if (--phase < 0) {
-            prevTurn(game, saved);
-            phase = game.getPhases().length - 1;
+            if (saved.getTurn() > 0) {
+                prevTurn(game, saved);
+                phase = game.getPhases().length - 1;
+            }
+            else
+                phase = 0;
 		}
 		else if (phase >= game.getPhases().length) {
             nextTurn(game, saved);
-		    phase = 0;
+            phase = 0;
 		}
         saved.setPhase(phase);
     }   
@@ -144,8 +148,12 @@ public class Ocs {
             phase = game.getPhases().length - 1;
 		}
 		else if (++phase >= game.getPhases().length) {
-            nextTurn(game, saved);
-		    phase = 0;
+            if (saved.getTurn() < game.getTurns()) {
+                nextTurn(game, saved);
+                phase = 0;
+            }
+            else
+                phase = game.getPhases().length - 1;
 		}
         saved.setPhase(phase);
     }
