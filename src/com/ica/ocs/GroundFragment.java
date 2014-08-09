@@ -67,6 +67,8 @@ public class GroundFragment extends Fragment {
 	private PlayAudio audio;
     private Terrain terrain;
     private Ground ground;
+    private String[] terrainWithinList;
+    private String[] terrainBetweenList;
     private TerrainEffect terrainWithin;
     private TerrainEffect terrainBetween;
     private int attackAR = 1;
@@ -85,7 +87,9 @@ public class GroundFragment extends Fragment {
 		    audio = new PlayAudio (getActivity());
             terrain = new Terrain();
             ground = new Ground(terrain);
-        
+            terrainWithinList = terrain.getList(false);
+            terrainBetweenList = terrain.getList(true);
+
             rootView = inflater.inflate(R.layout.ground, container, false);
         
             edtGroundAttackArmor = (EditText   )rootView.findViewById(R.id.edtGroundAttackArmor);
@@ -126,14 +130,14 @@ public class GroundFragment extends Fragment {
              
             edtGroundAttackArmor.setText("0");
             edtGroundDefendArmor.setText("0");
-            
-		    ArrayAdapter<String> terrainadapter = new ArrayAdapter<String> (getActivity(), android.R.layout.simple_spinner_dropdown_item, terrain.getList(false));
+
+            ArrayAdapter<String> terrainadapter = new ArrayAdapter<String> (getActivity(), android.R.layout.simple_spinner_dropdown_item, terrainWithinList);
 		    terrainadapter.setDropDownViewResource (android.R.layout.simple_spinner_dropdown_item);
             spinGroundTerrain.setAdapter(terrainadapter);
 
             edtGroundAttackMech.setText("0");
             edtGroundDefendMech.setText("0");
-		    ArrayAdapter<String> terrainadapter2 = new ArrayAdapter<String> (getActivity(), android.R.layout.simple_spinner_dropdown_item, terrain.getList(true));
+		    ArrayAdapter<String> terrainadapter2 = new ArrayAdapter<String> (getActivity(), android.R.layout.simple_spinner_dropdown_item, terrainBetweenList);
 		    terrainadapter2.setDropDownViewResource (android.R.layout.simple_spinner_dropdown_item);
             spinGroundTerrainBtween.setAdapter(terrainadapter2);
     
@@ -148,10 +152,10 @@ public class GroundFragment extends Fragment {
 		    spinGroundAttackAR.setSelection(1);
 		    spinGroundDefendAR.setSelection(1);
 
-            checkGroundAttackCombat.setChecked(false);
-            checkGroundDefendCombat.setChecked(false); 
-            checkGroundAttackTrace.setChecked(false); 
-            checkGroundDefendTrace.setChecked(false); 
+            checkGroundAttackCombat.setChecked(true);
+            checkGroundDefendCombat.setChecked(true);
+            checkGroundAttackTrace.setChecked(true);
+            checkGroundDefendTrace.setChecked(true);
 
 		    ArrayAdapter<String> hhadapter = new ArrayAdapter<String> (getActivity(), android.R.layout.simple_spinner_dropdown_item, ground.getHedgehog());
 		    hhadapter.setDropDownViewResource (android.R.layout.simple_spinner_dropdown_item);
@@ -189,7 +193,7 @@ public class GroundFragment extends Fragment {
     
 		    spinGroundTerrain.setOnItemSelectedListener(new OnItemSelectedListener() {
                 public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                    terrainWithin = terrain.get(pos);
+                    terrainWithin = terrain.get(terrainWithinList[pos]);
                     updateResults();
                 }
                 @Override
@@ -225,7 +229,7 @@ public class GroundFragment extends Fragment {
         
 		    spinGroundTerrainBtween.setOnItemSelectedListener(new OnItemSelectedListener() {
                 public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                    terrainBetween = terrain.get(pos);
+                    terrainBetween = terrain.get(terrainBetweenList[pos]);
                     updateResults();
                 }
                 @Override

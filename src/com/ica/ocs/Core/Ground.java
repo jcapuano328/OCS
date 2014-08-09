@@ -191,13 +191,13 @@ public class Ground {
 		int index=co.size();
 		for (index--; index>=0; index--) {
             Odds o = co.get(index);
-			if (o.getOdds() <= odds)
+			if (o.getOdds() <= odds || odds > o.getOdds())
 				break;
 		}
-		if (index < 0) index = co.size() - 1;
+		if (index < 0) index = 0;
 		index += shift;
 		if 		(index < 0) 		index = 0;
-		else if	(index >= co.size()) index = co.size() -1;
+		else if	(index >= co.size()) index = co.size() - 1;
 		
 		int dice = combatdice + drm;
 		if 		(dice < 1)  dice = 1;
