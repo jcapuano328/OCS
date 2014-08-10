@@ -43,7 +43,10 @@ public class SupplyDestructionFragment extends SupplyBaseTabFragment {
     
         imgSupplyDestructionDie1 = (ImageView  )rootView.findViewById(R.id.imgSupplyDestructionDie1);
         btnSupplyDestructionDiceRoll = (Button)rootView.findViewById(R.id.btnSupplyDestructionDiceRoll);
-    
+
+        edtSupplyDestructionStartSupply.setText("0");
+        edtSupplyDestructionStartTokens.setText("0");
+
         // event handlers
 		edtSupplyDestructionStartSupply.addTextChangedListener(new TextWatcher() {
 			@Override

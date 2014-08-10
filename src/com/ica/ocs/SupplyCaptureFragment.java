@@ -64,6 +64,10 @@ public class SupplyCaptureFragment extends SupplyBaseTabFragment {
         imgSupplyCaptureDie1 = (ImageView  )rootView.findViewById(R.id.imgSupplyCaptureDie1);
         btnSupplyCaptureDiceRoll = (Button)rootView.findViewById(R.id.btnSupplyCaptureDiceRoll);
 
+        edtSupplyCaptureStartUnit.setText("0");
+        edtSupplyCaptureStartSupply.setText("0");
+        edtSupplyCaptureStartTokens.setText("0");
+
         radioSupplyCaptureDump.setChecked(true);
 
         // event handlers
