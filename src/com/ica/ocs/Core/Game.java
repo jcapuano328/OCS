@@ -143,16 +143,39 @@ public class Game {
         return 0;
     }
 
+    public String getOtherPlayer(String name) {
+        for (Player p : players) {
+            if (!p.getName().equals(name))
+                return p.getName();
+        }
+        return "";
+    }
+
 
     public String[] getPhases() {
         return phases;
     }
     
-    public String getPhase(int phase) {
+    public String getPhase(int phase, String initPlayer) {
         if (phase < 0)
-            return phases[0];
-        if (phase >= phases.length)
-            return phases[phases.length-1];
-        return phases[phase];
+            phase = 0;
+        else if (phase >= phases.length)
+            phase = phases.length-1;
+        String s = phases[phase];
+        if (initPlayer != null && !initPlayer.isEmpty()) {
+            String player, token;
+            if (s.indexOf("1:") >= 0) {
+                // initiative player turn
+                player = initPlayer;
+                token = "1:";
+            }
+            else {
+                // non-initiative player turn
+                player = getOtherPlayer(initPlayer);
+                token = "2:";
+            }
+            s = s.replace(token, player + ":");
+        }
+        return s;
     }    
 }

@@ -133,14 +133,6 @@ public class AdminFragment extends Fragment {
                 imgAdminWeatherDie2.setVisibility(View.INVISIBLE);
             }
         
-		    spinAdminInitiative.setOnItemSelectedListener(new OnItemSelectedListener() {
-                public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                    saved.setInitiative(game.getPlayers().get(pos).getName());
-                }
-                @Override
-                public void onNothingSelected(AdapterView<?> arg0) {
-                }
-            });            
 		    ArrayAdapter<String> adapter1 = new ArrayAdapter<String> (getActivity(), android.R.layout.simple_spinner_dropdown_item, players);
 		    adapter1.setDropDownViewResource (android.R.layout.simple_spinner_dropdown_item);
 		    spinAdminInitiative.setAdapter(adapter1);
@@ -178,9 +170,20 @@ public class AdminFragment extends Fragment {
 			        updateWeather();
 			    }
 		    });
-            
-            
-		    imgAdminInitiativeDie1.setOnClickListener(new OnClickListener() {
+
+
+            spinAdminInitiative.setOnItemSelectedListener(new OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+                    saved.setInitiative(game.getPlayers().get(pos).getName());
+                    GameActivity activity = (GameActivity)getActivity();
+                    activity.updateInitiativePlayer();
+                }
+                @Override
+                public void onNothingSelected(AdapterView<?> arg0) {
+                }
+            });
+
+            imgAdminInitiativeDie1.setOnClickListener(new OnClickListener() {
 			    @Override
 			    public void onClick(View arg0) {
                     dice.increment(4);

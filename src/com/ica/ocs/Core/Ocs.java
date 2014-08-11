@@ -159,6 +159,6 @@ public class Ocs {
     }
     
     public static String getCurrentPhase(Game game, Saved saved) {
-        return game.getPhase(saved.getPhase());
+        return game.getPhase(saved.getPhase(), saved.getInitiative());
     }
 }

@@ -308,7 +308,11 @@ public class GameActivity extends FragmentActivity implements ActionBar.TabListe
             return false;
         }
     }                
-    
+
+    public void updateInitiativePlayer() {
+        update();
+    }
+
     private void prevTurn() {
 		Ocs.prevTurn(game, saved);
 		update();
