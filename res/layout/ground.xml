@@ -158,7 +158,15 @@
                 android:layout_weight=".20"
                 android:layout_height="wrap_content"
                 android:gravity="center" />
-            
+            <TextView
+                    android:id="@+id/txtGroundOdds"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="1:1"
+                    android:layout_width="0dp"
+                    android:layout_weight=".40"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+
         </LinearLayout>
             
         <LinearLayout
@@ -283,38 +291,12 @@
                     android:layout_height="fill_parent"/>
 
         </LinearLayout>
-            
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1.0"
-            android:orientation="horizontal"
-            android:paddingBottom="5dp">
 
-            <TextView
-                    android:text="Odds"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="0dp"
-                    android:layout_weight=".40"
-                    android:layout_height="wrap_content"
-                    android:gravity="right" android:layout_gravity="center_vertical"/>
-
-            <TextView
-                    android:id="@+id/txtGroundOdds"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="1:1"
-                    android:layout_width="0dp"
-                    android:layout_weight=".20"
-                    android:layout_height="wrap_content"
-                    android:gravity="center" />
-
-        </LinearLayout>
-            
         <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:weightSum="1.0"
-                android:orientation="horizontal" android:paddingBottom="10dp" android:paddingTop="10dp">
+                android:orientation="horizontal" android:paddingTop="20dp" android:paddingBottom="20dp">
 
             <TextView
                     android:text="Surprise"

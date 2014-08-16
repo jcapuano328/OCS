@@ -24,8 +24,8 @@ public class Game {
 		"1: Mode and Movement",
 		"1: Mode and Movement - Barrage",
 		"1: Supply",
-		"1: Reaction - Movement",
-		"1: Reaction - Barrage",
+		"2: Reaction - Movement",
+		"2: Reaction - Barrage",
 		"1: Combat - Barrage",
 		"1: Combat - Ground",
 		"1: Exploit - Movement",
@@ -38,8 +38,8 @@ public class Game {
 		"2: Mode and Movement",
 		"2: Mode and Movement - Barrage",
 		"2: Supply",
-		"2: Reaction - Movement",
-		"2: Reaction - Barrage",
+		"1: Reaction - Movement",
+		"1: Reaction - Barrage",
 		"2: Combat - Barrage",
 		"2: Combat - Ground",
 		"2: Exploit - Movement",
@@ -165,12 +165,12 @@ public class Game {
         if (initPlayer != null && !initPlayer.isEmpty()) {
             String player, token;
             if (s.indexOf("1:") >= 0) {
-                // initiative player turn
+                // initiative player
                 player = initPlayer;
                 token = "1:";
             }
             else {
-                // non-initiative player turn
+                // non-initiative player
                 player = getOtherPlayer(initPlayer);
                 token = "2:";
             }

@@ -70,7 +70,8 @@ public class AirFlakFragment extends AirBaseTabFragment {
         imgAirFlakDie2 = (ImageView  )rootView.findViewById(R.id.imgAirFlakDie2);
         imgAirFlakDie3 = (ImageView  )rootView.findViewById(R.id.imgAirFlakDie3);
         btnAirFlakDiceRoll = (Button)rootView.findViewById(R.id.btnAirFlakDiceRoll);
-    
+
+        editAirFlakSize.setText("1");
 		editAirFlakShip.setText("0");
     
         ArrayAdapter<String> baseadapter = new ArrayAdapter<String> (activity, android.R.layout.simple_spinner_dropdown_item, air.getAirBaseLevels());
