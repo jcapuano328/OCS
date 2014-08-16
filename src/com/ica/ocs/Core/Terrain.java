@@ -41,7 +41,8 @@ public class Terrain {
 		effects.add(new TerrainEffect("Low Hills", "Close", 1, 1, 1, 1, 1, 1));
 		effects.add(new TerrainEffect("Hills", "Close", 1, 1, 1, 1, 1, 1));
 		effects.add(new TerrainEffect("Rough", "Close", .5, .5, 1, 1, 1, 1));
-		effects.add(new TerrainEffect("Mountain", "Very Close", .333, .5, 1, .333, 1, 1));
+		effects.add(new TerrainEffect("Mountain", "Very Close", .333, .5, 1, .333, .5, 1));
+        effects.add(new TerrainEffect("Lava", "Very Close", .5, .5, 1, .5, .5, 1));
 		effects.add(new TerrainEffect("Village", "Close", 1, 1, 1, 1, 1, 1));
 		effects.add(new TerrainEffect("Minor City", "Very Close", .5, .5, 1, .5, 1, 1));
 		effects.add(new TerrainEffect("Major City", "Extremely Close", .333, .5, 1, .333, 1, 1));
@@ -53,7 +54,8 @@ public class Terrain {
 		effects.add(new TerrainEffect("Swamp", "Very Close", .5, .5, 1, .5, .5, 1));
 		effects.add(new TerrainEffect("Frozen Swamp", "Close", .5, .5, 1, .5, 1, 1));
 		effects.add(new TerrainEffect("Dry Lake", "Other", .333, .5, 1, .333, .5, 1));
-		effects.add(new TerrainEffect("Wadi", "Other", .5, .5, 1, 1, 1, 1));
+		effects.add(new TerrainEffect("Wadi", "Other", .5, .5, .5, 1, 1, 1));
+        effects.add(new TerrainEffect("Escarpment", "Other", .25, .333, .5, 1, 1, 1));
 		effects.add(new TerrainEffect("Moscow Defense", "Close", 1, 1, 1, 2, 2, 2));
 	}
 }
