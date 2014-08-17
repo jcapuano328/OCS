@@ -24,7 +24,6 @@ public class AirFlakFragment extends AirBaseTabFragment {
 	private EditText editAirFlakShip;
     
     private CheckBox checkAirFlakHQ;
-    private CheckBox checkAirFlakManyAircraft;
             
     private Spinner spinAirFlakPatrolZone;
             
@@ -60,7 +59,6 @@ public class AirFlakFragment extends AirBaseTabFragment {
 		editAirFlakShip = (EditText)rootView.findViewById(R.id.editAirFlakShip);
 	
         checkAirFlakHQ = (CheckBox)rootView.findViewById(R.id.checkAirFlakHQ);
-        checkAirFlakManyAircraft = (CheckBox)rootView.findViewById(R.id.checkAirFlakManyAircraft);
         spinAirFlakPatrolZone = (Spinner )rootView.findViewById(R.id.spinAirFlakPatrolZone);
         checkAirFlakTrainbusting = (CheckBox)rootView.findViewById(R.id.checkAirFlakTrainbusting);
     
@@ -163,18 +161,6 @@ public class AirFlakFragment extends AirBaseTabFragment {
             }
         });            
     
-        checkAirFlakHQ.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View arg0) {
-                updateResults();
-			}
-		});        
-        checkAirFlakManyAircraft.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View arg0) {
-                updateResults();
-			}
-		});        
         checkAirFlakTrainbusting.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
@@ -252,7 +238,7 @@ public class AirFlakFragment extends AirBaseTabFragment {
         return checkAirFlakHQ.isChecked();
     }
     boolean getManyAircraft() {
-        return checkAirFlakManyAircraft.isChecked();
+        return getSize() >= 3;
     }
     boolean getTrainbusting() {
         return checkAirFlakTrainbusting.isChecked();
