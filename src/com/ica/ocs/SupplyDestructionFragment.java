@@ -13,8 +13,14 @@ import com.ica.dice.*;
 
 public class SupplyDestructionFragment extends SupplyBaseTabFragment {
 
+
     private EditText edtSupplyDestructionStartSupply;
+    private Button btnSupplyDestructionStartSupplyPrev;
+    private Button btnSupplyDestructionStartSupplyNext;
+    
     private EditText edtSupplyDestructionStartTokens;
+    private Button btnSupplyDestructionStartTokensPrev;
+    private Button btnSupplyDestructionStartTokensNext;
             
     private TextView txtSupplyDestructionRemainingSupply;
     private TextView txtSupplyDestructionRemainingTokens;
@@ -34,7 +40,12 @@ public class SupplyDestructionFragment extends SupplyBaseTabFragment {
     public void create() {
         
         edtSupplyDestructionStartSupply  = (EditText)rootView.findViewById(R.id.edtSupplyDestructionStartSupply);
+        btnSupplyDestructionStartSupplyPrev = (Button)rootView.findViewById(R.id.btnSupplyDestructionStartSupplyPrev);
+        btnSupplyDestructionStartSupplyNext = (Button)rootView.findViewById(R.id.btnSupplyDestructionStartSupplyNext);
+        
         edtSupplyDestructionStartTokens  = (EditText)rootView.findViewById(R.id.edtSupplyDestructionStartTokens);
+        btnSupplyDestructionStartTokensPrev = (Button)rootView.findViewById(R.id.btnSupplyDestructionStartTokensPrev);
+        btnSupplyDestructionStartTokensNext = (Button)rootView.findViewById(R.id.btnSupplyDestructionStartTokensNext);
 
         txtSupplyDestructionRemainingSupply  = (TextView)rootView.findViewById(R.id.txtSupplyDestructionRemainingSupply);
         txtSupplyDestructionRemainingTokens  = (TextView)rootView.findViewById(R.id.txtSupplyDestructionRemainingTokens);
@@ -60,6 +71,26 @@ public class SupplyDestructionFragment extends SupplyBaseTabFragment {
 			    updateResults();
             }
         });
+        
+		btnSupplyDestructionStartSupplyPrev.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+			    int value = getSupply();
+			    if (--value < 0) value = 0;
+			    edtSupplyDestructionStartSupply.setText(Integer.toString(value));
+			    //updateResults();
+            
+			}
+		});        
+		btnSupplyDestructionStartSupplyNext.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+			    int value = getSupply();
+			    edtSupplyDestructionStartSupply.setText(Integer.toString(++value));
+			    //updateResults();
+			}
+		});        
+        
 		edtSupplyDestructionStartTokens.addTextChangedListener(new TextWatcher() {
 			@Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -72,6 +103,26 @@ public class SupplyDestructionFragment extends SupplyBaseTabFragment {
 			    updateResults();
             }
         });
+		btnSupplyDestructionStartTokensPrev.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+			    int value = getTokens();
+			    if (--value < 0) value = 0;
+			    edtSupplyDestructionStartTokens.setText(Integer.toString(value));
+			    //updateResults();
+            
+			}
+		});        
+		btnSupplyDestructionStartTokensNext.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+			    int value = getTokens();
+                if (++value > 3) value = 3;
+			    edtSupplyDestructionStartTokens.setText(Integer.toString(value));
+			    //updateResults();
+			}
+		});        
+    
     
         imgSupplyDestructionDie1.setOnClickListener(new OnClickListener() {
 			@Override

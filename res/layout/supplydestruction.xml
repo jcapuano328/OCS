@@ -29,7 +29,7 @@
                 android:text="Supply"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="0dp"
-                android:layout_weight=".30"
+                android:layout_weight=".22"
                 android:layout_height="wrap_content"
                 android:gravity="center" />
             
@@ -41,6 +41,8 @@
             android:weightSum="1.0"
             android:orientation="horizontal"
             android:paddingBottom="5dp">
+            
+            
             <TextView
                 android:text="Start"
                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -49,27 +51,51 @@
                 android:layout_height="wrap_content"
                 android:gravity="left" />
             
+            <Button
+                android:id="@+id/btnSupplyDestructionStartSupplyPrev"
+                android:layout_width="0dp"
+                android:layout_weight=".06"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_previous_item"/>
             <EditText
                 android:id="@+id/edtSupplyDestructionStartSupply"
-                android:inputType="number"
-                android:layout_width="0dp"
-                android:layout_weight=".20"
-                android:layout_height="wrap_content"
-                android:gravity="center" android:numeric="integer"/>
-            
-            <EditText
-                android:id="@+id/edtSupplyDestructionStartTokens"
                 android:inputType="number"
                 android:layout_width="0dp"
                 android:layout_weight=".10"
                 android:layout_height="wrap_content"
                 android:gravity="center" android:numeric="integer"/>
+            <Button
+                android:id="@+id/btnSupplyDestructionStartSupplyNext"
+                android:layout_width="0dp"
+                android:layout_weight=".06"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_next_item"/>
+                
+            <Button
+                android:id="@+id/btnSupplyDestructionStartTokensPrev"
+                android:layout_width="0dp"
+                android:layout_weight=".06"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_previous_item"/>
+            <EditText
+                android:id="@+id/edtSupplyDestructionStartTokens"
+                android:inputType="number"
+                android:layout_width="0dp"
+                android:layout_weight=".06"
+                android:layout_height="wrap_content"
+                android:gravity="center" android:numeric="integer"/>
+            <Button
+                android:id="@+id/btnSupplyDestructionStartTokensNext"
+                android:layout_width="0dp"
+                android:layout_weight=".06"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_next_item"/>
             
             <TextView
                 android:text="T"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:layout_width="0dp"
-                android:layout_weight=".10"
+                android:layout_weight=".05"
                 android:layout_height="wrap_content"
                 android:gravity="left" />
             
@@ -81,6 +107,8 @@
             android:weightSum="1.0"
             android:orientation="horizontal"
             android:paddingBottom="5dp">
+            
+            
             <TextView
                 android:text="Remaining"
                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -92,14 +120,14 @@
             <TextView
                 android:id="@+id/txtSupplyDestructionRemainingSupply"
                 android:layout_width="0dp"
-                android:layout_weight=".20"
+                android:layout_weight=".22"
                 android:layout_height="wrap_content"
                 android:gravity="center" />
             
             <TextView
                 android:id="@+id/txtSupplyDestructionRemainingTokens"
                 android:layout_width="0dp"
-                android:layout_weight=".10"
+                android:layout_weight=".18"
                 android:layout_height="wrap_content"
                 android:gravity="center" />
             

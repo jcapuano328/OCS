@@ -16,20 +16,20 @@
                 android:orientation="horizontal"
                 android:weightSum="1.0"
                 android:paddingBottom="10dp">
-        
-            <TextView
-                android:text=""
-                android:textAppearance="?android:attr/textAppearanceLarge"
+
+            <Button
+                android:id="@+id/btnGroundReset" 
                 android:layout_width="0dp"
-                android:layout_weight=".20"
+                android:layout_weight=".15"
                 android:layout_height="wrap_content"
-                android:gravity="center" />
-            
+                android:text="Reset"
+                style="?android:attr/buttonStyleSmall"
+                android:background="@drawable/blue_button"/>
             <TextView
                 android:text="Attack"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="0dp"
-                android:layout_weight=".20"
+                android:layout_weight=".27"
                 android:layout_height="wrap_content"
                 android:gravity="center" />
             
@@ -37,7 +37,7 @@
                 android:text="Defend"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="0dp"
-                android:layout_weight=".20"
+                android:layout_weight=".27"
                 android:layout_height="wrap_content"
                 android:gravity="center" />
             
@@ -45,7 +45,7 @@
                 android:text="Terrain"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="0dp"
-                android:layout_weight=".40"
+                android:layout_weight=".30"
                 android:layout_height="wrap_content"
                 android:gravity="center" />
             
@@ -61,30 +61,54 @@
                 android:text="Armor"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="0dp"
-                android:layout_weight=".20"
+                android:layout_weight=".15"
                 android:layout_height="wrap_content"
                 android:gravity="left" />
-            
+
+            <Button
+                android:id="@+id/btnGroundAttackArmorPrev"
+                android:layout_width="0dp"
+                android:layout_weight=".06"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_previous_item"/>
             <EditText
                 android:id="@+id/edtGroundAttackArmor"
                 android:inputType="numberDecimal"
                 android:layout_width="0dp"
-                android:layout_weight=".20"
+                android:layout_weight=".15"
                 android:layout_height="wrap_content"
                 android:gravity="center" />
-            
+            <Button
+                android:id="@+id/btnGroundAttackArmorNext"
+                android:layout_width="0dp"
+                android:layout_weight=".06"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_next_item"/>
+
+            <Button
+                android:id="@+id/btnGroundDefendArmorPrev"
+                android:layout_width="0dp"
+                android:layout_weight=".06"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_previous_item"/>
             <EditText
                 android:id="@+id/edtGroundDefendArmor"
                 android:inputType="numberDecimal"
                 android:layout_width="0dp"
-                android:layout_weight=".20"
+                android:layout_weight=".15"
                 android:layout_height="wrap_content"
                 android:gravity="center" />
-            
+            <Button
+                android:id="@+id/btnGroundDefendArmorNext"
+                android:layout_width="0dp"
+                android:layout_weight=".06"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_next_item"/>
+
             <Spinner
                 android:id="@+id/spinGroundTerrain" 
                 android:layout_width="0dp"
-                android:layout_weight=".40"
+                android:layout_weight=".30"
                 android:layout_height="wrap_content"
                 android:gravity="center"/>
             
@@ -96,34 +120,59 @@
             android:weightSum="1.0"
             android:orientation="horizontal"
             android:paddingBottom="5dp">
+            
             <TextView
                 android:text="Mech"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="0dp"
-                android:layout_weight=".20"
+                android:layout_weight=".15"
                 android:layout_height="wrap_content"
                 android:gravity="left" />
-            
+
+            <Button
+                android:id="@+id/btnGroundAttackMechPrev"
+                android:layout_width="0dp"
+                android:layout_weight=".06"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_previous_item"/>
             <EditText
                 android:id="@+id/edtGroundAttackMech"
                 android:inputType="numberDecimal"
                 android:layout_width="0dp"
-                android:layout_weight=".20"
+                android:layout_weight=".15"
                 android:layout_height="wrap_content"
                 android:gravity="center" />
-            
+            <Button
+                android:id="@+id/btnGroundAttackMechNext"
+                android:layout_width="0dp"
+                android:layout_weight=".06"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_next_item"/>
+
+            <Button
+                android:id="@+id/btnGroundDefendMechPrev"
+                android:layout_width="0dp"
+                android:layout_weight=".06"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_previous_item"/>
             <EditText
                 android:id="@+id/edtGroundDefendMech"
                 android:inputType="numberDecimal"
                 android:layout_width="0dp"
-                android:layout_weight=".20"
+                android:layout_weight=".15"
                 android:layout_height="wrap_content"
                 android:gravity="center" />
+            <Button
+                android:id="@+id/btnGroundDefendMechNext"
+                android:layout_width="0dp"
+                android:layout_weight=".06"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_next_item"/>
             
             <Spinner
                 android:id="@+id/spinGroundTerrainBtween" 
                 android:layout_width="0dp"
-                android:layout_weight=".40"
+                android:layout_weight=".30"
                 android:layout_height="wrap_content" 
                 android:gravity="center" />
             
@@ -135,37 +184,63 @@
             android:weightSum="1.0"
             android:orientation="horizontal"
             android:paddingBottom="5dp">
+            
             <TextView
                 android:text="Other"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="0dp"
-                android:layout_weight=".20"
+                android:layout_weight=".15"
                 android:layout_height="wrap_content"
                 android:gravity="left" />
-            
+
+            <Button
+                android:id="@+id/btnGroundAttackOtherPrev"
+                android:layout_width="0dp"
+                android:layout_weight=".06"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_previous_item"/>
             <EditText
                 android:id="@+id/edtGroundAttackOther"
                 android:inputType="numberDecimal"
                 android:layout_width="0dp"
-                android:layout_weight=".20"
+                android:layout_weight=".15"
                 android:layout_height="wrap_content"
                 android:gravity="center" />
-            
+            <Button
+                android:id="@+id/btnGroundAttackOtherNext"
+                android:layout_width="0dp"
+                android:layout_weight=".06"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_next_item"/>
+
+            <Button
+                android:id="@+id/btnGroundDefendOtherPrev"
+                android:layout_width="0dp"
+                android:layout_weight=".06"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_previous_item"/>
             <EditText
                 android:id="@+id/edtGroundDefendOther"
                 android:inputType="numberDecimal"
                 android:layout_width="0dp"
-                android:layout_weight=".20"
+                android:layout_weight=".15"
                 android:layout_height="wrap_content"
                 android:gravity="center" />
+            <Button
+                android:id="@+id/btnGroundDefendOtherNext"
+                android:layout_width="0dp"
+                android:layout_weight=".06"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_next_item"/>
+            
             <TextView
-                    android:id="@+id/txtGroundOdds"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="1:1"
-                    android:layout_width="0dp"
-                    android:layout_weight=".40"
-                    android:layout_height="wrap_content"
-                    android:gravity="center" />
+                android:id="@+id/txtGroundOdds"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="1:1"
+                android:layout_width="0dp"
+                android:layout_weight=".30"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
 
         </LinearLayout>
             
@@ -196,18 +271,18 @@
                 android:gravity="center" />
 
             <TextView
-                    android:text="Hedgehog"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="0dp"
-                    android:layout_weight=".20"
-                    android:layout_height="wrap_content"
-                    android:gravity="left" android:layout_gravity="center_vertical"/>
+                android:text="Hedgehog"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:gravity="left" android:layout_gravity="center_vertical"/>
             <Spinner
-                    android:id="@+id/spinGroundDefendHedgehog"
-                    android:layout_width="0dp"
-                    android:layout_weight=".20"
-                    android:layout_height="wrap_content"
-                    android:gravity="center" />
+                android:id="@+id/spinGroundDefendHedgehog"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
 
         </LinearLayout>
             
@@ -242,12 +317,12 @@
                 android:gravity="center" />
 
             <RadioButton
-                    android:id="@+id/radioGroundRegular"
-                    android:text="Regular"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="0dp"
-                    android:layout_weight=".30"
-                    android:layout_height="fill_parent"/>
+                android:id="@+id/radioGroundRegular"
+                android:text="Regular"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="0dp"
+                android:layout_weight=".30"
+                android:layout_height="fill_parent"/>
 
         </LinearLayout>
             
@@ -283,12 +358,12 @@
                 android:gravity="center" />
 
             <RadioButton
-                    android:id="@+id/radioGroundOverrun"
-                    android:text="Overrun"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="0dp"
-                    android:layout_weight=".30"
-                    android:layout_height="fill_parent"/>
+                android:id="@+id/radioGroundOverrun"
+                android:text="Overrun"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="0dp"
+                android:layout_weight=".30"
+                android:layout_height="fill_parent"/>
 
         </LinearLayout>
 
@@ -299,38 +374,38 @@
                 android:orientation="horizontal" android:paddingTop="20dp" android:paddingBottom="20dp">
 
             <TextView
-                    android:text="Surprise"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="0dp"
-                    android:layout_weight=".20"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"/>
+                android:text="Surprise"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:gravity="left"/>
 
             <TextView
-                    android:id="@+id/txtGroundSurpise"
-                    android:text="NA"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:layout_width="0dp"
-                    android:layout_weight=".30"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"/>
+                android:id="@+id/txtGroundSurpise"
+                android:text="NA"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="0dp"
+                android:layout_weight=".30"
+                android:layout_height="wrap_content"
+                android:gravity="left"/>
 
             <TextView
-                    android:text="Results"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="0dp"
-                    android:layout_weight=".20"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"/>
+                android:text="Results"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:gravity="left"/>
 
             <TextView
-                    android:id="@+id/txtGroundResults"
-                    android:text="NA"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:layout_width="0dp"
-                    android:layout_weight=".30"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"/>
+                android:id="@+id/txtGroundResults"
+                android:text="NA"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="0dp"
+                android:layout_weight=".30"
+                android:layout_height="wrap_content"
+                android:gravity="left"/>
 
         </LinearLayout>
 
@@ -387,7 +462,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/red_button"
                 style="@style/button_text" android:paddingLeft="10dp"/>
-            
+
         </LinearLayout>
 
     </LinearLayout>

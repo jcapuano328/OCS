@@ -23,12 +23,10 @@
                     android:layout_height="wrap_content"/>
                 <Button
                     android:id="@+id/btnAirCombatAttackerPrev"
-                    android:text="-"
                     android:layout_width="0dp"
                     android:layout_weight=".15"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/blue_button"
-                    style="@style/button_text" />
+                    android:background="@drawable/ic_action_previous_item"/>
                 <EditText
                     android:id="@+id/editAirCombatAttacker"
                     android:inputType="number"
@@ -38,12 +36,10 @@
                     android:gravity="center" />
                 <Button
                     android:id="@+id/btnAirCombatAttackerNext"
-                    android:text="+"
                     android:layout_width="0dp"
                     android:layout_weight=".15"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/blue_button"
-                    style="@style/button_text" />
+                    android:background="@drawable/ic_action_next_item"/>
     
         </LinearLayout>
         
@@ -61,12 +57,10 @@
                     android:layout_height="wrap_content"/>
                 <Button
                     android:id="@+id/btnAirCombatDefenderPrev"
-                    android:text="-"
                     android:layout_width="0dp"
                     android:layout_weight=".15"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/blue_button"
-                    style="@style/button_text" />
+                    android:background="@drawable/ic_action_previous_item"/>
                 <EditText
                     android:id="@+id/editAirCombatDefender"
                     android:inputType="number"
@@ -76,12 +70,10 @@
                     android:gravity="center" />
                 <Button
                     android:id="@+id/btnAirCombatDefenderNext"
-                    android:text="+"
                     android:layout_width="0dp"
                     android:layout_weight=".15"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/blue_button"
-                    style="@style/button_text" />
+                    android:background="@drawable/ic_action_next_item"/>
     
         </LinearLayout>
 

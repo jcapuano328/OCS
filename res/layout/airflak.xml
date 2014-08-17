@@ -24,12 +24,10 @@
                     android:layout_height="wrap_content"/>
             <Button
                     android:id="@+id/btnAirFlakSizePrev"
-                    android:text="-"
                     android:layout_width="0dp"
                     android:layout_weight=".15"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/blue_button"
-                    style="@style/button_text" />
+                    android:background="@drawable/ic_action_previous_item"/>
             <EditText
                     android:id="@+id/editAirFlakSize"
                     android:inputType="numberDecimal"
@@ -39,12 +37,10 @@
                     android:gravity="center" />
             <Button
                     android:id="@+id/btnAirFlakSizeNext"
-                    android:text="+"
                     android:layout_width="0dp"
                     android:layout_weight=".15"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/blue_button"
-                    style="@style/button_text" />
+                    android:background="@drawable/ic_action_next_item"/>
 
         </LinearLayout>
 
@@ -86,12 +82,10 @@
                     android:layout_height="wrap_content"/>
                 <Button
                     android:id="@+id/btnAirFlakShipPrev"
-                    android:text="-"
                     android:layout_width="0dp"
                     android:layout_weight=".15"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/blue_button"
-                    style="@style/button_text" />
+                    android:background="@drawable/ic_action_previous_item"/>
                 <EditText
                     android:id="@+id/editAirFlakShip"
                     android:inputType="numberDecimal"
@@ -101,12 +95,10 @@
                     android:gravity="center" />
                 <Button
                     android:id="@+id/btnAirFlakShipNext"
-                    android:text="+"
                     android:layout_width="0dp"
                     android:layout_weight=".15"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/blue_button"
-                    style="@style/button_text" />
+                    android:background="@drawable/ic_action_next_item"/>
     
         </LinearLayout>
         

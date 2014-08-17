@@ -16,10 +16,18 @@ public class SupplyCaptureFragment extends SupplyBaseTabFragment {
     private RadioButton radioSupplyCaptureDump;
     private RadioButton radioSupplyCaptureTrucks;
     private RadioButton radioSupplyCaptureWagons;
-            
+    
     private EditText edtSupplyCaptureStartUnit;
+    private Button btnSupplyCaptureStartUnitPrev;
+    private Button btnSupplyCaptureStartUnitNext;
+    
     private EditText edtSupplyCaptureStartSupply;
+    private Button btnSupplyCaptureStartSupplyPrev;
+    private Button btnSupplyCaptureStartSupplyNext;
+    
     private EditText edtSupplyCaptureStartTokens;
+    private Button btnSupplyCaptureStartTokensPrev;
+    private Button btnSupplyCaptureStartTokensNext;
             
     private TextView txtSupplyCaptureCapturedUnit;
     private TextView txtSupplyCaptureCapturedSupply;
@@ -48,8 +56,16 @@ public class SupplyCaptureFragment extends SupplyBaseTabFragment {
         radioSupplyCaptureWagons  = (RadioButton)rootView.findViewById(R.id.radioSupplyCaptureWagons);
 
         edtSupplyCaptureStartUnit  = (EditText)rootView.findViewById(R.id.edtSupplyCaptureStartUnit);
+        btnSupplyCaptureStartUnitPrev = (Button)rootView.findViewById(R.id.btnSupplyCaptureStartUnitPrev);
+        btnSupplyCaptureStartUnitNext = (Button)rootView.findViewById(R.id.btnSupplyCaptureStartUnitNext);
+        
         edtSupplyCaptureStartSupply  = (EditText)rootView.findViewById(R.id.edtSupplyCaptureStartSupply);
+        btnSupplyCaptureStartSupplyPrev = (Button)rootView.findViewById(R.id.btnSupplyCaptureStartSupplyPrev);
+        btnSupplyCaptureStartSupplyNext = (Button)rootView.findViewById(R.id.btnSupplyCaptureStartSupplyNext);
+        
         edtSupplyCaptureStartTokens  = (EditText)rootView.findViewById(R.id.edtSupplyCaptureStartTokens);
+        btnSupplyCaptureStartTokensPrev = (Button)rootView.findViewById(R.id.btnSupplyCaptureStartTokensPrev);
+        btnSupplyCaptureStartTokensNext = (Button)rootView.findViewById(R.id.btnSupplyCaptureStartTokensNext);
 
         txtSupplyCaptureCapturedUnit  = (TextView)rootView.findViewById(R.id.txtSupplyCaptureCapturedUnit);
         txtSupplyCaptureCapturedSupply  = (TextView)rootView.findViewById(R.id.txtSupplyCaptureCapturedSupply);
@@ -108,6 +124,25 @@ public class SupplyCaptureFragment extends SupplyBaseTabFragment {
 			    updateResults();
             }
         });
+		btnSupplyCaptureStartUnitPrev.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+			    int value = getUnit();
+			    if (--value < 0) value = 0;
+			    edtSupplyCaptureStartUnit.setText(Integer.toString(value));
+			    //updateResults();
+            
+			}
+		});        
+		btnSupplyCaptureStartUnitNext.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+			    int value = getUnit();
+                edtSupplyCaptureStartUnit.setText(Integer.toString(++value));
+			    //updateResults();
+			}
+		});        
+        
 		edtSupplyCaptureStartSupply.addTextChangedListener(new TextWatcher() {
 			@Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -120,6 +155,25 @@ public class SupplyCaptureFragment extends SupplyBaseTabFragment {
 			    updateResults();
             }
         });
+		btnSupplyCaptureStartSupplyPrev.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+			    int value = getSupply();
+			    if (--value < 0) value = 0;
+			    edtSupplyCaptureStartSupply.setText(Integer.toString(value));
+			    //updateResults();
+            
+			}
+		});        
+		btnSupplyCaptureStartSupplyNext.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+			    int value = getSupply();
+			    edtSupplyCaptureStartSupply.setText(Integer.toString(++value));
+			    //updateResults();
+			}
+		});        
+        
 		edtSupplyCaptureStartTokens.addTextChangedListener(new TextWatcher() {
 			@Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -132,6 +186,26 @@ public class SupplyCaptureFragment extends SupplyBaseTabFragment {
 			    updateResults();
             }
         });
+		btnSupplyCaptureStartTokensPrev.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+			    int value = getTokens();
+			    if (--value < 0) value = 0;
+			    edtSupplyCaptureStartTokens.setText(Integer.toString(value));
+			    //updateResults();
+            
+			}
+		});        
+		btnSupplyCaptureStartTokensNext.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+			    int value = getTokens();
+                if (++value > 3) value = 3;
+			    edtSupplyCaptureStartTokens.setText(Integer.toString(value));
+			    //updateResults();
+			}
+		});        
+    
     
         imgSupplyCaptureDie1.setOnClickListener(new OnClickListener() {
 			@Override

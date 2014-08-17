@@ -26,16 +26,35 @@ public class GroundFragment extends Fragment {
 
     private View rootView;
     
+    private Button btnGroundReset;
+    
     private EditText edtGroundAttackArmor;
+	private Button btnGroundAttackArmorPrev;
+	private Button btnGroundAttackArmorNext;
+    
     private EditText edtGroundDefendArmor;
+	private Button btnGroundDefendArmorPrev;
+	private Button btnGroundDefendArmorNext;
+    
     private Spinner spinGroundTerrain; 
 
     private EditText edtGroundAttackMech;
+	private Button btnGroundAttackMechPrev;
+	private Button btnGroundAttackMechNext;
+    
     private EditText edtGroundDefendMech;
+	private Button btnGroundDefendMechPrev;
+	private Button btnGroundDefendMechNext;
+    
     private Spinner spinGroundTerrainBtween; 
 
     private EditText edtGroundAttackOther;
+	private Button btnGroundAttackOtherPrev;
+	private Button btnGroundAttackOtherNext;
+    
     private EditText edtGroundDefendOther;
+	private Button btnGroundDefendOtherPrev;
+	private Button btnGroundDefendOtherNext;
 
     private Spinner spinGroundAttackAR; 
     private Spinner spinGroundDefendAR; 
@@ -92,16 +111,35 @@ public class GroundFragment extends Fragment {
 
             rootView = inflater.inflate(R.layout.ground, container, false);
         
+            btnGroundReset = (Button)rootView.findViewById(R.id.btnGroundReset);
+        
             edtGroundAttackArmor = (EditText   )rootView.findViewById(R.id.edtGroundAttackArmor);
+            btnGroundAttackArmorPrev = (Button)rootView.findViewById(R.id.btnGroundAttackArmorPrev);
+            btnGroundAttackArmorNext = (Button)rootView.findViewById(R.id.btnGroundAttackArmorNext);
+            
             edtGroundDefendArmor = (EditText   )rootView.findViewById(R.id.edtGroundDefendArmor);
+            btnGroundDefendArmorPrev = (Button)rootView.findViewById(R.id.btnGroundDefendArmorPrev);
+            btnGroundDefendArmorNext = (Button)rootView.findViewById(R.id.btnGroundDefendArmorNext);
+
             spinGroundTerrain  = (Spinner    )rootView.findViewById(R.id.spinGroundTerrain );
             
             edtGroundAttackMech = (EditText   )rootView.findViewById(R.id.edtGroundAttackMech);
+            btnGroundAttackMechPrev = (Button)rootView.findViewById(R.id.btnGroundAttackMechPrev);
+            btnGroundAttackMechNext = (Button)rootView.findViewById(R.id.btnGroundAttackMechNext);
+
             edtGroundDefendMech = (EditText   )rootView.findViewById(R.id.edtGroundDefendMech);
+            btnGroundDefendMechPrev = (Button)rootView.findViewById(R.id.btnGroundDefendMechPrev);
+            btnGroundDefendMechNext = (Button)rootView.findViewById(R.id.btnGroundDefendMechNext);
+
             spinGroundTerrainBtween  = (Spinner    )rootView.findViewById(R.id.spinGroundTerrainBtween );
             
             edtGroundAttackOther = (EditText   )rootView.findViewById(R.id.edtGroundAttackOther);
+            btnGroundAttackOtherPrev = (Button)rootView.findViewById(R.id.btnGroundAttackOtherPrev);
+            btnGroundAttackOtherNext = (Button)rootView.findViewById(R.id.btnGroundAttackOtherNext);
+             
             edtGroundDefendOther = (EditText   )rootView.findViewById(R.id.edtGroundDefendOther);
+            btnGroundDefendOtherPrev = (Button)rootView.findViewById(R.id.btnGroundDefendOtherPrev);
+            btnGroundDefendOtherNext = (Button)rootView.findViewById(R.id.btnGroundDefendOtherNext);
             
             spinGroundAttackAR  = (Spinner    )rootView.findViewById(R.id.spinGroundAttackAR );
             spinGroundDefendAR  = (Spinner    )rootView.findViewById(R.id.spinGroundDefendAR );
@@ -128,43 +166,33 @@ public class GroundFragment extends Fragment {
             txtGroundSurpise  = (TextView   )rootView.findViewById(R.id.txtGroundSurpise );
             txtGroundResults  = (TextView   )rootView.findViewById(R.id.txtGroundResults );
              
-            edtGroundAttackArmor.setText("0");
-            edtGroundDefendArmor.setText("0");
-
             ArrayAdapter<String> terrainadapter = new ArrayAdapter<String> (getActivity(), android.R.layout.simple_spinner_dropdown_item, terrainWithinList);
 		    terrainadapter.setDropDownViewResource (android.R.layout.simple_spinner_dropdown_item);
             spinGroundTerrain.setAdapter(terrainadapter);
 
-            edtGroundAttackMech.setText("0");
-            edtGroundDefendMech.setText("0");
+            
 		    ArrayAdapter<String> terrainadapter2 = new ArrayAdapter<String> (getActivity(), android.R.layout.simple_spinner_dropdown_item, terrainBetweenList);
 		    terrainadapter2.setDropDownViewResource (android.R.layout.simple_spinner_dropdown_item);
             spinGroundTerrainBtween.setAdapter(terrainadapter2);
     
-            edtGroundAttackOther.setText("0");
-            edtGroundDefendOther.setText("0");
-
 		    ArrayAdapter<String> aradapter = new ArrayAdapter<String> (getActivity(), android.R.layout.simple_spinner_dropdown_item, ground.getUnitAR());
 		    aradapter.setDropDownViewResource (android.R.layout.simple_spinner_dropdown_item);
             spinGroundAttackAR.setAdapter(aradapter); 
             spinGroundDefendAR.setAdapter(aradapter); 
             
-		    spinGroundAttackAR.setSelection(1);
-		    spinGroundDefendAR.setSelection(1);
-
-            checkGroundAttackCombat.setChecked(true);
-            checkGroundDefendCombat.setChecked(true);
-            checkGroundAttackTrace.setChecked(true);
-            checkGroundDefendTrace.setChecked(true);
-
 		    ArrayAdapter<String> hhadapter = new ArrayAdapter<String> (getActivity(), android.R.layout.simple_spinner_dropdown_item, ground.getHedgehog());
 		    hhadapter.setDropDownViewResource (android.R.layout.simple_spinner_dropdown_item);
             spinGroundDefendHedgehog.setAdapter(hhadapter); 
             
-            radioGroundRegular.setChecked(true); 
-            radioGroundOverrun.setChecked(false); 
             
             // event handlers
+		    btnGroundReset.setOnClickListener(new OnClickListener() {
+			    @Override
+			    public void onClick(View arg0) {
+                    reset();
+			    }
+		    });        
+            
 		    edtGroundAttackArmor.addTextChangedListener(new TextWatcher() {
 			    @Override
                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -177,6 +205,25 @@ public class GroundFragment extends Fragment {
 			        updateResults();
                 }
             });
+		    btnGroundAttackArmorPrev.setOnClickListener(new OnClickListener() {
+			    @Override
+			    public void onClick(View arg0) {
+			        double value = getAttackerArmor();
+			        if (--value < 0) value = 0;
+			        edtGroundAttackArmor.setText(Double.toString(value));
+			        //updateResults();
+                
+			    }
+		    });        
+		    btnGroundAttackArmorNext.setOnClickListener(new OnClickListener() {
+			    @Override
+			    public void onClick(View arg0) {
+			        double value = getAttackerArmor();
+			        edtGroundAttackArmor.setText(Double.toString(++value));
+			        //updateResults();
+			    }
+		    });        
+            
     
 		    edtGroundDefendArmor.addTextChangedListener(new TextWatcher() {
 			    @Override
@@ -190,6 +237,25 @@ public class GroundFragment extends Fragment {
 			        updateResults();
                 }
             });
+		    btnGroundDefendArmorPrev.setOnClickListener(new OnClickListener() {
+			    @Override
+			    public void onClick(View arg0) {
+			        double value = getDefenderArmor();
+			        if (--value < 0) value = 0;
+			        edtGroundDefendArmor.setText(Double.toString(value));
+			        //updateResults();
+                
+			    }
+		    });        
+		    btnGroundDefendArmorNext.setOnClickListener(new OnClickListener() {
+			    @Override
+			    public void onClick(View arg0) {
+			        double value = getDefenderArmor();
+			        edtGroundDefendArmor.setText(Double.toString(++value));
+			        //updateResults();
+			    }
+		    });        
+            
     
 		    spinGroundTerrain.setOnItemSelectedListener(new OnItemSelectedListener() {
                 public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
@@ -213,6 +279,24 @@ public class GroundFragment extends Fragment {
 			        updateResults();
                 }
             });
+		    btnGroundAttackMechPrev.setOnClickListener(new OnClickListener() {
+			    @Override
+			    public void onClick(View arg0) {
+			        double value = getAttackerMech();
+			        if (--value < 0) value = 0;
+			        edtGroundAttackMech.setText(Double.toString(value));
+			        //updateResults();
+                
+			    }
+		    });        
+		    btnGroundAttackMechNext.setOnClickListener(new OnClickListener() {
+			    @Override
+			    public void onClick(View arg0) {
+			        double value = getAttackerMech();
+			        edtGroundAttackMech.setText(Double.toString(++value));
+			        //updateResults();
+			    }
+		    });        
     
 		    edtGroundDefendMech.addTextChangedListener(new TextWatcher() {
 			    @Override
@@ -226,7 +310,26 @@ public class GroundFragment extends Fragment {
 			        updateResults();
                 }
             });
-        
+		    btnGroundDefendMechPrev.setOnClickListener(new OnClickListener() {
+			    @Override
+			    public void onClick(View arg0) {
+			        double value = getDefenderMech();
+			        if (--value < 0) value = 0;
+			        edtGroundDefendMech.setText(Double.toString(value));
+			        //updateResults();
+                
+			    }
+		    });        
+		    btnGroundDefendMechNext.setOnClickListener(new OnClickListener() {
+			    @Override
+			    public void onClick(View arg0) {
+			        double value = getDefenderMech();
+			        edtGroundDefendMech.setText(Double.toString(++value));
+			        //updateResults();
+			    }
+		    });        
+    
+    
 		    spinGroundTerrainBtween.setOnItemSelectedListener(new OnItemSelectedListener() {
                 public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                     terrainBetween = terrain.get(terrainBetweenList[pos]);
@@ -249,7 +352,25 @@ public class GroundFragment extends Fragment {
 			        updateResults();
                 }
             });
-    
+		    btnGroundAttackOtherPrev.setOnClickListener(new OnClickListener() {
+			    @Override
+			    public void onClick(View arg0) {
+			        double value = getAttackerOther();
+			        if (--value < 0) value = 0;
+			        edtGroundAttackOther.setText(Double.toString(value));
+			        //updateResults();
+                
+			    }
+		    });        
+		    btnGroundAttackOtherNext.setOnClickListener(new OnClickListener() {
+			    @Override
+			    public void onClick(View arg0) {
+			        double value = getAttackerOther();
+			        edtGroundAttackOther.setText(Double.toString(++value));
+			        //updateResults();
+			    }
+		    });        
+            
 		    edtGroundDefendOther.addTextChangedListener(new TextWatcher() {
 			    @Override
                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -262,9 +383,27 @@ public class GroundFragment extends Fragment {
 			        updateResults();
                 }
             });
-
-        
-		    spinGroundAttackAR.setOnItemSelectedListener(new OnItemSelectedListener() {
+		    btnGroundDefendOtherPrev.setOnClickListener(new OnClickListener() {
+			    @Override
+			    public void onClick(View arg0) {
+			        double value = getDefenderOther();
+			        if (--value < 0) value = 0;
+			        edtGroundDefendOther.setText(Double.toString(value));
+			        //updateResults();
+                
+			    }
+		    });        
+		    btnGroundDefendOtherNext.setOnClickListener(new OnClickListener() {
+			    @Override
+			    public void onClick(View arg0) {
+			        double value = getDefenderOther();
+			        edtGroundDefendOther.setText(Double.toString(++value));
+			        //updateResults();
+			    }
+		    });        
+            
+		    
+            spinGroundAttackAR.setOnItemSelectedListener(new OnItemSelectedListener() {
                 public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                     attackAR = pos;
                     updateResults();
@@ -385,12 +524,35 @@ public class GroundFragment extends Fragment {
 			    }
 		    });
 		
-            txtGroundSurpise.setText("", TextView.BufferType.NORMAL);
-            txtGroundResults.setText("", TextView.BufferType.NORMAL);
+            reset();
+            
 		    displayDice();
         }
         return rootView;
     }            
+    
+    void reset() {
+        edtGroundAttackArmor.setText("0");
+        edtGroundDefendArmor.setText("0");
+        edtGroundAttackMech.setText("0");
+        edtGroundDefendMech.setText("0");
+        edtGroundAttackOther.setText("0");
+        edtGroundDefendOther.setText("0");
+        
+		spinGroundAttackAR.setSelection(1);
+		spinGroundDefendAR.setSelection(1);
+
+        checkGroundAttackCombat.setChecked(true);
+        checkGroundDefendCombat.setChecked(true);
+        checkGroundAttackTrace.setChecked(true);
+        checkGroundDefendTrace.setChecked(true);
+
+        radioGroundRegular.setChecked(true); 
+        radioGroundOverrun.setChecked(false); 
+        
+        txtGroundSurpise.setText("", TextView.BufferType.NORMAL);
+        txtGroundResults.setText("", TextView.BufferType.NORMAL);
+    }
     
 	void calcOdds() {
         ground.calculate(getAttackerArmor(), getAttackerMech(), getAttackerOther(), getAttackerCombatSupply(), getAttackerTraceSupply(),

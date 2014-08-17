@@ -104,12 +104,10 @@
                     android:layout_height="wrap_content"/>
                 <Button
                     android:id="@+id/btnSeaArtyPrev"
-                    android:text="-"
                     android:layout_width="0dp"
                     android:layout_weight=".15"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/blue_button"
-                    style="@style/button_text" />
+                    android:background="@drawable/ic_action_previous_item"/>
                 <EditText
                     android:id="@+id/editSeaArty"
                     android:inputType="numberDecimal"
@@ -119,12 +117,10 @@
                     android:gravity="center" />
                 <Button
                     android:id="@+id/btnSeaArtyNext"
-                    android:text="+"
                     android:layout_width="0dp"
                     android:layout_weight=".15"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/blue_button"
-                    style="@style/button_text" />
+                    android:background="@drawable/ic_action_next_item"/>
     
         </LinearLayout>
         
